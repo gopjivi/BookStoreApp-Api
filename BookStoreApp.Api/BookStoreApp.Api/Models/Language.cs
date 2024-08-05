@@ -17,7 +17,7 @@ namespace BookStoreApp.Api.Models
         [Required]
         [StringLength(100)]
         [Column("language_name")]
-        public required string LanguageName { get; set; }
+        public string LanguageName { get; set; }
 
         public IEnumerable<Book> Books { get; set; } = new List<Book>();
     }

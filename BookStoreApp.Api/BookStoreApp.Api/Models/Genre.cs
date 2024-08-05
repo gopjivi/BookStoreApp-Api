@@ -16,10 +16,10 @@ namespace BookStoreApp.Api.Models
         [Required]
         [StringLength(100)]
         [Column("genre_name")]
-        public required string GenreName { get; set; }
+        public string GenreName { get; set; }
 
         [NotMapped]
-        public int BookCount { get; set; }
+        public int? BookCount { get; set; }
 
         public IEnumerable<Book> Books { get; set; } = new List<Book>();
 

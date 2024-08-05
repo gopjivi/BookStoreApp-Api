@@ -15,12 +15,12 @@ namespace BookStoreApp.Api.Models
         [Required]
         [StringLength(100)]
         [Column("name")]
-        public required string Name { get; set; }
+        public string Name { get; set; }
 
         [Required]
         [StringLength(100)]
         [Column("display_name")]
-        public required string DisplayName { get; set; }
+        public string DisplayName { get; set; }
 
        
         [StringLength(1000)]

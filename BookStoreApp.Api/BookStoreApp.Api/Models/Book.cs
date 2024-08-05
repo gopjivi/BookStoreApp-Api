@@ -14,11 +14,11 @@ namespace BookStoreApp.Api.Models
         [Required]
         [StringLength(100)]
         [Column("title")]
-        public required string Title { get; set; } = string.Empty;
+        public string Title { get; set; } = string.Empty;
 
         [Required]
         [Column("price")]
-        public required float Price { get; set; }
+        public float Price { get; set; }
 
         [Required]
         [Column("publication_date")]
@@ -37,7 +37,7 @@ namespace BookStoreApp.Api.Models
 
         [Required]
         [Column("storage_section")]
-        public required string StorageSection { get; set; } = string.Empty;
+        public string StorageSection { get; set; } = string.Empty;
 
 
         [Column("storage_shelf")]
@@ -51,20 +51,20 @@ namespace BookStoreApp.Api.Models
         public int LanguageID { get; set; }
 
         [ForeignKey("LanguageID")]
-        public Language Language { get; set; }
+        public Language? Language { get; set; }
 
         [Column("genre_id")]
         public int GenreID { get; set; }
 
         [ForeignKey("GenreID")]
-        public Genre Genre { get; set; }
+        public Genre? Genre { get; set; }
 
         [Column("author_id")]
         public int AuthorID { get; set; }
 
 
         [ForeignKey("AuthorID")]
-        public Author Author { get; set; }
+        public Author? Author { get; set; }
 
 
 
