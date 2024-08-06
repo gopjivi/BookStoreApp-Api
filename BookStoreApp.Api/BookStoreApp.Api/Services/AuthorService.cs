@@ -28,6 +28,11 @@ namespace BookStoreApp.Api.Services
             return await _authorRepository.CheckAuthorNameIsExistsForUpdate(authorID,authorName);
         }
 
+        public async Task<bool> CheckAuthorExistsInBook(int authorID)
+        {
+            return await _authorRepository.CheckAuthorExistsInBook(authorID);
+        }
+
         public async Task<bool> DeleteAuthorAsync(int id)
         {
             return await _authorRepository.DeleteAuthorAsync(id);

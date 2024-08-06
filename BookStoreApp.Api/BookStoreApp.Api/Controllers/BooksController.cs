@@ -3,6 +3,8 @@ using BookStoreApp.Api.Services;
 using BookStoreApp.Api.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace BookStoreApp.Api.Controllers
 {
@@ -21,6 +23,8 @@ namespace BookStoreApp.Api.Controllers
         {
             var books = await _bookService.GetAllBooksAsync();
 
+            string json = JsonConvert.SerializeObject(books);
+            
             return Ok(books);
         }
 
@@ -39,7 +43,10 @@ namespace BookStoreApp.Api.Controllers
 
         [HttpPost]
         public async Task<ActionResult<Book>> CreateBook(Book book)
+
         {
+            
+       
             var createdBook = await _bookService.AddBookAsync(book);
 
             if (createdBook)
@@ -65,7 +72,7 @@ namespace BookStoreApp.Api.Controllers
                 return NotFound();
             }
 
-            return NoContent();
+            return Ok(result);
         }
 
         // DELETE: api/books/5

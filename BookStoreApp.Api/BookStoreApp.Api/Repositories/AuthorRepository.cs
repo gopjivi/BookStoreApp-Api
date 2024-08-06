@@ -54,6 +54,17 @@ namespace BookStoreApp.Api.Repositories
             return false;
         }
 
+        public async Task<bool> CheckAuthorExistsInBook(int authorID)
+        {
+            var author = await _context.Authors
+                .Include(a => a.Books)
+                .Where(a => a.AuthorID == authorID && a.Books.Count() > 0)
+                .FirstOrDefaultAsync();
+
+            return author != null;
+        }
+
+
         public async Task<bool> CheckAuthorNameIsExistsForUpdate(int authorID, string authorName)
         {
             var author = _context.Authors.Where(c => c.DisplayName == authorName && c.AuthorID != authorID).FirstOrDefault();

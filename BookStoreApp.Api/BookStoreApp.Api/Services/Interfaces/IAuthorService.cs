@@ -11,6 +11,8 @@ namespace BookStoreApp.Api.Services.Interfaces
         Task<bool> DeleteAuthorAsync(int id);
 
         Task<bool> CheckAuthorNameIsExists(string authorName);
+
+        Task<bool> CheckAuthorExistsInBook(int authorID);
         Task<bool> CheckAuthorNameIsExistsForUpdate(int authorID, string authorName);
         Task<bool> SaveChangesAsync();
     }

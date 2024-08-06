@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata;
+using Newtonsoft.Json;
 
 namespace BookStoreApp.Api.Models
 {
@@ -64,7 +65,10 @@ namespace BookStoreApp.Api.Models
 
 
         [ForeignKey("AuthorID")]
+        // [JsonIgnore]
         public Author? Author { get; set; }
+        [NotMapped]
+        public string? BookImageURL {get;set;}
 
 
 

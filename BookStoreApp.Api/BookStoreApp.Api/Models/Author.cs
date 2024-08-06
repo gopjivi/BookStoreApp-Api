@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace BookStoreApp.Api.Models
 {
@@ -27,6 +28,7 @@ namespace BookStoreApp.Api.Models
         [Column("biography")]
         public  string? Biography { get; set; }
 
+        [JsonIgnore]
         public IEnumerable<Book> Books { get; set; } = new List<Book>();
 
     }

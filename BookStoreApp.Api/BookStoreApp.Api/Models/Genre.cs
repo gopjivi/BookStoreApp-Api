@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
 
 namespace BookStoreApp.Api.Models
 {
@@ -21,6 +22,7 @@ namespace BookStoreApp.Api.Models
         [NotMapped]
         public int? BookCount { get; set; }
 
+        [JsonIgnore]
         public IEnumerable<Book> Books { get; set; } = new List<Book>();
 
     }

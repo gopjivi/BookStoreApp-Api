@@ -12,6 +12,8 @@ namespace BookStoreApp.Api.Repositories.Interfaces
 
         Task<bool> CheckAuthorNameIsExists(string authorName);
         Task<bool> CheckAuthorNameIsExistsForUpdate(int authorID,string authorName);
+
+        Task<bool> CheckAuthorExistsInBook(int authorID);
         Task<bool> SaveChangesAsync();
     }
 }

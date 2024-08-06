@@ -25,12 +25,30 @@ namespace BookStoreApp.Api.Services
 
         public async Task<IEnumerable<Book>> GetAllBooksAsync()
         {
-            return await _bookRepository.GetAllBooksAsync();
+            IEnumerable<Book> books= await _bookRepository.GetAllBooksAsync();
+            foreach (Book book in books) {
+                if (book.BookImage != null)
+                {
+                    string imageBase64Data = Convert.ToBase64String(book.BookImage);
+                    string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+                    book.BookImageURL = imageDataURL;
+                }
+            }
+            return books;
         }
 
         public async Task<Book> GetBookByIdAsync(int id)
         {
-            return await _bookRepository.GetBookByIdAsync(id);
+            Book book= await  _bookRepository.GetBookByIdAsync(id);
+            if (book.BookImage != null)
+            {
+                string imageBase64Data = Convert.ToBase64String(book.BookImage);
+                string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+                book.BookImageURL = imageDataURL;
+            }
+            return book;
+
+
         }
 
         public async Task<bool> SaveChangesAsync()

@@ -15,12 +15,12 @@ namespace BookStoreApp.Api.Repositories
 
         public async Task<IEnumerable<Book>> GetAllBooksAsync()
         {
-            return await _context.Books.OrderByDescending(c => c.BookID).ToListAsync();
+            return await _context.Books .Include(a => a.Author).Include(a => a.Language).Include(a => a.Genre).OrderByDescending(c => c.BookID).ToListAsync();
         }
 
         public async Task<Book> GetBookByIdAsync(int id)
         {
-            return await _context.Books.FindAsync(id);
+            return await _context.Books.Include(a => a.Author).Include(a => a.Language).Include(a => a.Genre).FirstOrDefaultAsync(b => b.BookID == id); ;
         }
 
         public async Task<bool> AddBookAsync(Book book)

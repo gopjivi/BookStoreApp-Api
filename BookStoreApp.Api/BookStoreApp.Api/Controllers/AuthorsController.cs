@@ -1,6 +1,7 @@
 ﻿using BookStoreApp.Api.Models;
 using BookStoreApp.Api.Services;
 using BookStoreApp.Api.Services.Interfaces;
+using Humanizer.Localisation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,6 +40,15 @@ namespace BookStoreApp.Api.Controllers
         {
 
             bool isExists = await _authorService.CheckAuthorNameIsExistsForUpdate(id,name);
+            return Ok(isExists);
+
+        }
+
+        [HttpGet("CheckAuthorExistsInBook/{id}")]
+        public async Task<ActionResult<bool>> CheckAuthorExistsInBook(int id)
+        {
+
+            bool isExists = await _authorService.CheckAuthorExistsInBook(id);
             return Ok(isExists);
 
         }
@@ -84,7 +94,7 @@ namespace BookStoreApp.Api.Controllers
                 return NotFound();
             }
 
-            return NoContent();
+            return Ok(result);
         }
 
         // DELETE: api/authors/5
