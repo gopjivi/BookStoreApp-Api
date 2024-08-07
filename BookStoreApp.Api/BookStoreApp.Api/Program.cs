@@ -38,7 +38,11 @@ builder.Services.AddScoped<IBookService, BookService>();
 //CORS
 builder.Services.AddCors(options => options.AddPolicy("MyTestCORS", policy =>
 {
-    policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+policy.WithOrigins("http://localhost:3000")
+.AllowAnyMethod()
+.AllowAnyHeader();
+    // allow all origin
+    //policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
 }));
 
 

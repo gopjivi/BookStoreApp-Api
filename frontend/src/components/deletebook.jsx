@@ -27,8 +27,9 @@ const booksApiUrl = "https://localhost:7088/api/Books";
       if (response !== 204) {
         throw new Error("Network response was not ok");
       } else {
-        console.log("book deleted successfully:", id);
         setShowAlert(true);
+        console.log("book deleted successfully:", id);
+       
         handleClose();
       }
     } catch (error) {

@@ -128,12 +128,14 @@ export default function Book() {
   }
 
   function handelShowEditBook(id) {
+   
     dispatch({ type: "SHOW_EDIT_BOOK" });
     getDataById(booksApiUrl, id)
       .then((data) => {
         setBook(data);
       })
       .catch((error) => console.error("Error fetching book:", error));
+   
   }
 
   function handleCloseEditBook() {
@@ -624,18 +626,18 @@ export default function Book() {
           </div>
         </div>
 
-        <AddBook
+        {showAddBook &&   <AddBook
           show={showAddBook}
           handleClose={handleCloseAddBook}
           errors={errors}
           setErrors={(errors) =>
             dispatch({ type: "SET_ERRORS", payload: errors })
           }
-        />
+        />}
        
       </div>
 
-      <EditBook
+      {showEditBook && <EditBook
         show={showEditBook}
         handleClose={handleCloseEditBook}
         errors={errors}
@@ -644,18 +646,18 @@ export default function Book() {
         setErrors={(errors) =>
           dispatch({ type: "SET_ERRORS", payload: errors })
         }
-      />
-       <ViewBook
+      />}
+       {showViewBook &&  <ViewBook
         show={showViewBook}
         handleClose={handleCloseViewBook}
         book={book}
         setBook={setBook}
-      />
-        <DeleteBook
+      />}
+       {showDeleteBook &&  <DeleteBook
         show={showDeleteBook}
         handleClose={handleCloseDeleteBook}
         book={book}
-      />
+      />}
     
     </div>
   );

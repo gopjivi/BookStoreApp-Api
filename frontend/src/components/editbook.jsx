@@ -15,7 +15,7 @@ export default function EditBook({
   errors,
   setErrors,
 }) {
-  console.log(book);
+  //console.log("book loading",book);
   const [showAlert, setShowAlert] = useState(false);
   const [offerAvailable, setOfferAvailable] = useState(false);
   const [authors, setAuthors] = useState({});
@@ -64,11 +64,26 @@ export default function EditBook({
 
     const formattedDate = `${yyyy}-${mm}-${dd}`;
     setMaxDate(formattedDate);
+
+   
   }, [authorsData, genresData, languageData]);
 
+  // useEffect(() => {
+  //   if (languages.length > 0 && book.languageID) {
+  //     const selectedLanguage = languages.find(
+  //       (language) => language.languageID === parseInt(book.languageID)
+  //     );
+  //     const selectedLanguageName = selectedLanguage?.languageName || "";
+  //     setSelectedLanguage(selectedLanguageName);
+  //   }
+  // }, [languages, book.languageID]);
  
   useEffect(() => {
+    if(book)
+    {
     setPreview(book.bookImageURL);
+    }
+   
   }, [book]);
 
   const handleRadioChange = (value) => {
@@ -213,6 +228,7 @@ export default function EditBook({
     };
     reader.readAsDataURL(file);
   };
+
   const fileToByteArray = (file) => {
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
@@ -224,6 +240,15 @@ export default function EditBook({
         reader.onerror = reject;
         reader.readAsArrayBuffer(file);
     });
+};
+
+// Utility function to format date to yyyy-MM-dd
+const formatDate = (dateString) => {
+  const date = new Date(dateString);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are 0-based
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
 };
 
   return (
@@ -361,7 +386,7 @@ export default function EditBook({
                   onChange={(e) =>
                     setBook({ ...book, publicationDate: e.target.value })
                   }
-                  value={book.publicationDate}
+                  value={formatDate(book.publicationDate)}
                   isInvalid={!!errors.publicationDate}
                 />
                 <Form.Control.Feedback type="invalid">
@@ -494,7 +519,7 @@ export default function EditBook({
           </Form>
         </Offcanvas.Body>
       </Offcanvas>
-      <CustomAlert
+       <CustomAlert
         showAlert={showAlert}
         handleCloseAlert={handleCloseAlert}
         name={"Book"}

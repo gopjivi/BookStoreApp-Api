@@ -31,6 +31,7 @@ namespace BookStoreApp.Api.Services
                 {
                     string imageBase64Data = Convert.ToBase64String(book.BookImage);
                     string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+                  //  book.BookImage = null;
                     book.BookImageURL = imageDataURL;
                 }
             }
@@ -44,6 +45,7 @@ namespace BookStoreApp.Api.Services
             {
                 string imageBase64Data = Convert.ToBase64String(book.BookImage);
                 string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+               // book.BookImage = null;
                 book.BookImageURL = imageDataURL;
             }
             return book;

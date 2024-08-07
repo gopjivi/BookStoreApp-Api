@@ -82,6 +82,7 @@ export default function Author() {
     getAllData(authorsApiUrl)
       .then((data) => {
         setAuthors(data);
+        setAuthorsCopy(data);
         setLoading(false); // Set loading to false once data is fetched
       })
       .catch((error) => console.error("Error fetching authors:", error));

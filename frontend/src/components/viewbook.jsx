@@ -6,6 +6,10 @@ export default function ViewBook({ show, handleClose, book }) {
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
  console.log(book);
+ const formatDate = (dateString) => {
+  const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+  return new Date(dateString).toLocaleDateString(undefined, options);
+};
   return (
     <>
       <Offcanvas
@@ -53,7 +57,7 @@ export default function ViewBook({ show, handleClose, book }) {
             </div>
             <div className="row view-book">
               <div className="col">Publication Date:</div>
-              <div className="col">{book.publicationDate}</div>
+              <div className="col">{formatDate(book.publicationDate)}</div>
               <div className="col"></div>
             </div>
             <div className="row view-book">

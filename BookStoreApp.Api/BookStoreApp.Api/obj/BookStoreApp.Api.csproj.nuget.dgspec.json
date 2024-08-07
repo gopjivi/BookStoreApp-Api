@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\karpagam\\C#\\Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\BookStoreApp.Api.csproj": {}
+    "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\BookStoreApp.Api.csproj": {}
   },
   "projects": {
-    "D:\\Users\\karpagam\\C#\\Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\BookStoreApp.Api.csproj": {
+    "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\BookStoreApp.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\karpagam\\C#\\Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\BookStoreApp.Api.csproj",
+        "projectUniqueName": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\BookStoreApp.Api.csproj",
         "projectName": "BookStoreApp.Api",
-        "projectPath": "D:\\Users\\karpagam\\C#\\Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\BookStoreApp.Api.csproj",
+        "projectPath": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\BookStoreApp.Api.csproj",
         "packagesPath": "D:\\Users\\karpagam\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\karpagam\\C#\\Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\obj\\",
+        "outputPath": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Users\\karpagam\\AppData\\Roaming\\NuGet\\NuGet.Config",
