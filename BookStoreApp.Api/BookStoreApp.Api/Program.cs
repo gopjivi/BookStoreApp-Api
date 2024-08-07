@@ -5,6 +5,7 @@ using BookStoreApp.Api.Services;
 using BookStoreApp.Api.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,8 +19,13 @@ builder.Services.AddControllers()
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
+builder.Services.AddSwaggerGen(setupAction =>
+{ 
+    //configuring swagger documenation
+      var xmlCommentsFile = "BookStoreApp.xml";
+var xmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentsFile);
+setupAction.IncludeXmlComments(xmlCommentsFullPath);
+});
 //database
 builder.Services.AddDbContext<BookStoreDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

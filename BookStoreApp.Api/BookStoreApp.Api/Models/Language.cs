@@ -9,12 +9,16 @@ namespace BookStoreApp.Api.Models
 {
     [Index(nameof(LanguageName), IsUnique = true)]
     public class Language
-    {
+    {/// <summary>
+    /// Language id
+    /// </summary>
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("language_id")]
         public int LanguageID { get; set; }
-
+        /// <summary>
+        /// Language name
+        /// </summary>
         [Required]
         [StringLength(100)]
         [Column("language_name")]

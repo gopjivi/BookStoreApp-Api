@@ -16,8 +16,13 @@ namespace BookStoreApp.Api.Controllers
             _genreService = genreService;
         }
 
-
+        /// <summary>
+        /// Api to get all the Genres
+        /// </summary>
+        /// <returns> return all the genres</returns>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<Genre>>> GetAllGenres()
         {
             var genres = await _genreService.GetAllGenresAsync();
@@ -25,7 +30,13 @@ namespace BookStoreApp.Api.Controllers
             return Ok(genres);
         }
 
+        /// <summary>
+        /// Api to get all the Genres with BookCount
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("GetAllGenresWithBookCount")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<Genre>>> GetAllGenresWithBookCount()
         {
             var genres = await _genreService.GetAllGenresWithBookCountAsync();
@@ -33,7 +44,14 @@ namespace BookStoreApp.Api.Controllers
             return Ok(genres);
         }
 
+        /// <summary>
+        /// Api to check Genre name exists or not
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns>Return true if exists else false </returns>
         [HttpGet("CheckGenreNameIsExists/{name}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<bool>> CheckGenreNameIsExists(string name)
         {
            
@@ -42,7 +60,15 @@ namespace BookStoreApp.Api.Controllers
 
         }
 
+        /// <summary>
+        /// Api to get Genre by GenreID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>return only the particular genre details </returns>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Genre>> GetGenreById(int id)
         {
             var genre = await _genreService.GetGenreByIdAsync(id);
@@ -55,7 +81,15 @@ namespace BookStoreApp.Api.Controllers
             return Ok(genre);
         }
 
+        /// <summary>
+        /// Api to create new genre
+        /// </summary>
+        /// <param name="genre"></param>
+        /// <returns> return new genre with auto generated id</returns>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Genre>> CreateGenre(Genre genre)
         {
             var createdGenre = await _genreService.AddGenreAsync(genre);

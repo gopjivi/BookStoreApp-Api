@@ -5,11 +5,11 @@ import CustomAlert from "./customalert";
 import { useState } from "react";
 
 export default function DeleteBook({ show, handleClose, book }) {
-  const [showAlert, setShowAlert] = useState(false);
+  const [showDeleteAlert, setDeleteShowAlert] = useState(false);
 const booksApiUrl = "https://localhost:7088/api/Books";
 
   function handleCloseAlert() {
-    setShowAlert(false);
+    setDeleteShowAlert(false);
   }
  
 
@@ -27,7 +27,7 @@ const booksApiUrl = "https://localhost:7088/api/Books";
       if (response !== 204) {
         throw new Error("Network response was not ok");
       } else {
-        setShowAlert(true);
+        setDeleteShowAlert(true);
         console.log("book deleted successfully:", id);
        
         handleClose();
@@ -80,7 +80,7 @@ const booksApiUrl = "https://localhost:7088/api/Books";
         </Modal.Footer>
       </Modal>
       <CustomAlert
-        showAlert={showAlert}
+        showAlert={showDeleteAlert}
         handleCloseAlert={handleCloseAlert}
         name={"Book"}
         action={"Deleted"}

@@ -510,3 +510,4 @@ D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookSt
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\obj\Debug\net8.0\BookStoreApp.Api.pdb
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\obj\Debug\net8.0\BookStoreApp.Api.genruntimeconfig.cache
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\obj\Debug\net8.0\ref\BookStoreApp.Api.dll
+D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\BookStoreApp.xml

@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookStoreApp.Api</name>
+    </assembly>
+    <members>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.GetAllAuthors">
+            <summary>
+            Api to get all the Authors
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.CheckAuthorNameIsExists(System.String)">
+            <summary>
+            Api to check author name exists or not
+            </summary>
+            <param name="name"></param>
+            <returns>return true if name exists</returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.CheckAuthorNameIsExistsForUpdate(System.Int32,System.String)">
+            <summary>
+            Api to check auhtor name exists or not while updating author details
+            </summary>
+            <param name="id">updating author id</param>
+            <param name="name"> new author name</param>
+            <returns>return true if name exists</returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.CheckAuthorExistsInBook(System.Int32)">
+            <summary>
+            Api to check paricular author mapped in book
+            </summary>
+            <param name="id"></param>
+            <returns>return true if it mapped</returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.GetAuthorById(System.Int32)">
+            <summary>
+            Api to get particular auhtor by autthorID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.CreateAuthor(BookStoreApp.Api.Models.Author)">
+            <summary>
+            Api to create new auhtor
+            </summary>
+            <param name="author"></param>
+            <returns>return new author with id</returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.UpdateAuthor(System.Int32,BookStoreApp.Api.Models.Author)">
+            <summary>
+            Api to update particular author detail
+            </summary>
+            <param name="id"></param>
+            <param name="author"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.DeleteAuthor(System.Int32)">
+            <summary>
+            Api to delete particular Author
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.BooksController.GetAllBooks">
+            <summary>
+            Api to get all the books
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.BooksController.GetBookById(System.Int32)">
+            <summary>
+            Api to get the particular book by ID
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.BooksController.CreateBook(BookStoreApp.Api.Models.Book)">
+            <summary>
+            Apt to create a new book
+            </summary>
+            <param name="book">book details to create</param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.BooksController.UpdateBook(System.Int32,BookStoreApp.Api.Models.Book)">
+            <summary>
+            Api to update a particular book
+            </summary>
+            <param name="id">BookID to update</param>
+            <param name="book">updated book details</param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.BooksController.DeleteBook(System.Int32)">
+            <summary>
+            Api to delete a particualr book
+            </summary>
+            <param name="id">BookID to delete</param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.GenresController.GetAllGenres">
+            <summary>
+            Api to get all the Genres
+            </summary>
+            <returns> return all the genres</returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.GenresController.GetAllGenresWithBookCount">
+            <summary>
+            Api to get all the Genres with BookCount
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.GenresController.CheckGenreNameIsExists(System.String)">
+            <summary>
+            Api to check Genre name exists or not
+            </summary>
+            <param name="name"></param>
+            <returns>Return true if exists else false </returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.GenresController.GetGenreById(System.Int32)">
+            <summary>
+            Api to get Genre by GenreID
+            </summary>
+            <param name="id"></param>
+            <returns>return only the particular genre details </returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.GenresController.CreateGenre(BookStoreApp.Api.Models.Genre)">
+            <summary>
+            Api to create new genre
+            </summary>
+            <param name="genre"></param>
+            <returns> return new genre with auto generated id</returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.LanguagesController.GetAllLanguages">
+            <summary>
+             Get all the languages
+            </summary>
+            <returns>return all the languages</returns>
+        </member>
+        <member name="T:BookStoreApp.Api.Migrations.initalmigration">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.initalmigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.initalmigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.initalmigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:BookStoreApp.Api.Migrations.createdtables">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.createdtables.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.createdtables.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.createdtables.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:BookStoreApp.Api.Migrations.tableupdate">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.tableupdate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.tableupdate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.tableupdate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:BookStoreApp.Api.Migrations.relationshiptable">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.relationshiptable.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.relationshiptable.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.relationshiptable.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:BookStoreApp.Api.Migrations.sampleseeds">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.sampleseeds.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.sampleseeds.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.sampleseeds.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:BookStoreApp.Api.Migrations.updated_book_table">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.updated_book_table.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.updated_book_table.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.updated_book_table.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:BookStoreApp.Api.Migrations.check_migration">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.check_migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.check_migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:BookStoreApp.Api.Migrations.check_migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:BookStoreApp.Api.Models.Genre">
+            <summary>
+            Genres Table
+            </summary>
+        </member>
+        <member name="P:BookStoreApp.Api.Models.Genre.GenreID">
+            <summary>
+            Auto genreated GenreID
+            </summary>
+        </member>
+        <member name="P:BookStoreApp.Api.Models.Genre.GenreName">
+            <summary>
+            Genre Name
+            </summary>
+        </member>
+        <member name="P:BookStoreApp.Api.Models.Language.LanguageID">
+            <summary>
+            Language id
+            </summary>
+        </member>
+        <member name="P:BookStoreApp.Api.Models.Language.LanguageName">
+            <summary>
+            Language name
+            </summary>
+        </member>
+    </members>
+</doc>

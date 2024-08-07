@@ -16,7 +16,13 @@ namespace BookStoreApp.Api.Controllers
             _languageService = languageService;
         }
 
+        /// <summary>
+        ///  Get all the languages
+        /// </summary>
+        /// <returns>return all the languages</returns>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<Language>>> GetAllLanguages()
         {
             var languages = await _languageService.GetAllLanguagesAsync();
