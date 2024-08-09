@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zGgXqfzgrwE=",
+  "dgSpecHash": "fHKkiPTEpxE=",
   "success": true,
   "projectFilePath": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Test\\BookStoreApp.Test.csproj",
   "expectedPackageFiles": [
@@ -138,6 +138,7 @@
     "D:\\Users\\karpagam\\.nuget\\packages\\nuget.projectmodel\\6.9.1\\nuget.projectmodel.6.9.1.nupkg.sha512",
     "D:\\Users\\karpagam\\.nuget\\packages\\nuget.protocol\\6.9.1\\nuget.protocol.6.9.1.nupkg.sha512",
     "D:\\Users\\karpagam\\.nuget\\packages\\nuget.versioning\\6.9.1\\nuget.versioning.6.9.1.nupkg.sha512",
+    "D:\\Users\\karpagam\\.nuget\\packages\\reportgenerator\\5.3.8\\reportgenerator.5.3.8.nupkg.sha512",
     "D:\\Users\\karpagam\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "D:\\Users\\karpagam\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "D:\\Users\\karpagam\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
