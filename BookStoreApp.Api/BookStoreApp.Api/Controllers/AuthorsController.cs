@@ -19,7 +19,10 @@ namespace BookStoreApp.Api.Controllers
             _authorService = authorService;
             _logger = logger;
         }
-
+        /// <summary>
+        /// Api to get all the Author details
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -38,6 +41,11 @@ namespace BookStoreApp.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Api to check author name exists or not
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [HttpGet("CheckAuthorNameIsExists/{name}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -56,6 +64,12 @@ namespace BookStoreApp.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Api to check auhtor name exists or not updating auhtor
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
         [HttpGet("CheckAuthorNameIsExistsForUpdate/{id}/{name}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -74,6 +88,11 @@ namespace BookStoreApp.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Api to check Author mapped in Book or not
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("CheckAuthorExistsInBook/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -93,6 +112,11 @@ namespace BookStoreApp.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Api to get particular author details
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -118,6 +142,11 @@ namespace BookStoreApp.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Api to create a new author
+        /// </summary>
+        /// <param name="author"></param>
+        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -150,6 +179,12 @@ namespace BookStoreApp.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Api to update particualr author details
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="author"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -183,6 +218,11 @@ namespace BookStoreApp.Api.Controllers
             }
         }
 
+        /// <summary>
+        /// Api to delete particular author
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK)]

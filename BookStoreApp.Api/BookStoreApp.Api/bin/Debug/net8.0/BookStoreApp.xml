@@ -4,6 +4,63 @@
         <name>BookStoreApp.Api</name>
     </assembly>
     <members>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.GetAllAuthors">
+            <summary>
+            Api to get all the Author details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.CheckAuthorNameIsExists(System.String)">
+            <summary>
+            Api to check author name exists or not
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.CheckAuthorNameIsExistsForUpdate(System.Int32,System.String)">
+            <summary>
+            Api to check auhtor name exists or not updating auhtor
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.CheckAuthorExistsInBook(System.Int32)">
+            <summary>
+            Api to check Author mapped in Book or not
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.GetAuthorById(System.Int32)">
+            <summary>
+            Api to get particular author details
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.CreateAuthor(BookStoreApp.Api.Models.Author)">
+            <summary>
+            Api to create a new author
+            </summary>
+            <param name="author"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.UpdateAuthor(System.Int32,BookStoreApp.Api.Models.Author)">
+            <summary>
+            Api to update particualr author details
+            </summary>
+            <param name="id"></param>
+            <param name="author"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BookStoreApp.Api.Controllers.AuthorsController.DeleteAuthor(System.Int32)">
+            <summary>
+            Api to delete particular author
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:BookStoreApp.Api.Controllers.BooksController.GetAllBooks">
             <summary>
             Api to get all the books
