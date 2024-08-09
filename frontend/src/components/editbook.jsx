@@ -24,6 +24,7 @@ export default function EditBook({
   const [maxDate, setMaxDate] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("");
+  const [closeModalAfterAlert, setCloseModalAfterAlert] = useState(false);
 
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
@@ -82,6 +83,7 @@ export default function EditBook({
     if(book)
     {
     setPreview(book.bookImageURL);
+    setOfferAvailable(book.isOfferAvailable);
     }
    
   }, [book]);
@@ -123,6 +125,10 @@ export default function EditBook({
 
   function handleCloseAlert() {
     setShowAlert(false);
+    if (closeModalAfterAlert) {
+      handleClose();
+      setCloseModalAfterAlert(false); // Reset for the next use
+    }
   }
 
   function handleLanguageChange(event) {
@@ -200,8 +206,8 @@ export default function EditBook({
       setBook({});
       setFile(null);
       setPreview(null);
-      handleClose();
-
+      
+      setCloseModalAfterAlert(true);
       
       }
     } catch (error) {

@@ -1,3 +1,5 @@
+import { getAPIToken } from './config';
+
 //create new row
 export async function createNewData(url, data) {
   try {
@@ -6,6 +8,7 @@ export async function createNewData(url, data) {
       body: JSON.stringify(data),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
+        "Authorization": `Bearer ${getAPIToken()}`, // Get the token from config
       },
     });
 
@@ -30,6 +33,7 @@ export function getAllData(url) {
     credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${getAPIToken()}`, // Get the token from config
     },
   })
     .then((response) => {
@@ -53,6 +57,7 @@ export async function updateData(url, id, data) {
       body: JSON.stringify(data),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
+        "Authorization": `Bearer ${getAPIToken()}`, // Get the token from config
       },
     });
 
@@ -75,6 +80,9 @@ export async function deleteData(url, id) {
   try {
     const response = await fetch(`${url}/${id}`, {
       method: "DELETE",
+      headers: {
+        "Authorization": `Bearer ${getAPIToken()}`, // Get the token from config
+      },
     });
 
     if (!response.ok) {
@@ -98,6 +106,7 @@ export function getDataById(url, id) {
     credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${getAPIToken()}`, // Get the token from config
     },
   })
     .then((response) => {

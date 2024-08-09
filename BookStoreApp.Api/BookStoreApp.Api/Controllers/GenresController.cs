@@ -1,19 +1,26 @@
 ﻿using BookStoreApp.Api.Models;
 using BookStoreApp.Api.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Runtime.CompilerServices;
+using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BookStoreApp.Api.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class GenresController : ControllerBase
     {
         private readonly IGenreService _genreService;
-        public GenresController(IGenreService genreService)
+        private readonly ILogger<GenresController> _logger;
+
+        public GenresController(IGenreService genreService, ILogger<GenresController> logger)
         {
             _genreService = genreService;
+            _logger = logger;
         }
 
         /// <summary>
@@ -23,11 +30,23 @@ namespace BookStoreApp.Api.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<IEnumerable<Genre>>> GetAllGenres()
         {
-            var genres = await _genreService.GetAllGenresAsync();
+            try
+            {
+                _logger.LogInformation("Fetching all genres.");
 
-            return Ok(genres);
+                var genres = await _genreService.GetAllGenresAsync();
+
+                _logger.LogInformation("Successfully fetched all genres.");
+                return Ok(genres);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching all genres.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
 
         /// <summary>
@@ -37,11 +56,23 @@ namespace BookStoreApp.Api.Controllers
         [HttpGet("GetAllGenresWithBookCount")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<IEnumerable<Genre>>> GetAllGenresWithBookCount()
         {
-            var genres = await _genreService.GetAllGenresWithBookCountAsync();
+            try
+            {
+                _logger.LogInformation("Fetching all genres with book count.");
 
-            return Ok(genres);
+                var genres = await _genreService.GetAllGenresWithBookCountAsync();
+
+                _logger.LogInformation("Successfully fetched all genres with book count.");
+                return Ok(genres);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while fetching all genres with book count.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
 
         /// <summary>
@@ -54,10 +85,20 @@ namespace BookStoreApp.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<bool>> CheckGenreNameIsExists(string name)
         {
-           
-           bool isExists = await _genreService.CheckGenreNameIsExists(name);
-            return Ok(isExists);
+            try
+            {
+                _logger.LogInformation($"Checking if genre name '{name}' exists.");
 
+                bool isExists = await _genreService.CheckGenreNameIsExists(name);
+
+                _logger.LogInformation($"Genre name '{name}' exists: {isExists}.");
+                return Ok(isExists);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"An error occurred while checking if genre name '{name}' exists.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
 
         /// <summary>
@@ -71,14 +112,26 @@ namespace BookStoreApp.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Genre>> GetGenreById(int id)
         {
-            var genre = await _genreService.GetGenreByIdAsync(id);
-
-            if (genre == null)
+            try
             {
-                return NotFound();
-            }
+                _logger.LogInformation($"Fetching genre with ID {id}.");
 
-            return Ok(genre);
+                var genre = await _genreService.GetGenreByIdAsync(id);
+
+                if (genre == null)
+                {
+                    _logger.LogWarning($"Genre with ID {id} not found.");
+                    return NotFound();
+                }
+
+                _logger.LogInformation($"Successfully fetched genre with ID {id}.");
+                return Ok(genre);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"An error occurred while fetching genre with ID {id}.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
 
         /// <summary>
@@ -92,16 +145,26 @@ namespace BookStoreApp.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<Genre>> CreateGenre(Genre genre)
         {
-            var createdGenre = await _genreService.AddGenreAsync(genre);
-
-            if (createdGenre)
+            try
             {
-                return CreatedAtAction(nameof(GetGenreById), new { id = genre.GenreID }, genre);
+                _logger.LogInformation("Creating a new genre.");
+
+                var createdGenre = await _genreService.AddGenreAsync(genre);
+
+                if (createdGenre)
+                {
+                    _logger.LogInformation($"Successfully created genre with ID {genre.GenreID}.");
+                    return CreatedAtAction(nameof(GetGenreById), new { id = genre.GenreID }, genre);
+                }
+
+                _logger.LogWarning("Failed to create a new genre.");
+                return BadRequest();
             }
-
-            return BadRequest();
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while creating a new genre.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
         }
-
-
     }
 }

@@ -1,177 +1,214 @@
 ﻿using BookStoreApp.Api.Models;
-using BookStoreApp.Api.Services;
 using BookStoreApp.Api.Services.Interfaces;
-using Humanizer.Localisation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStoreApp.Api.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     [ApiController]
     public class AuthorsController : ControllerBase
     {
         private readonly IAuthorService _authorService;
-        public AuthorsController(IAuthorService authorService)
+        private readonly ILogger<AuthorsController> _logger;
+
+        public AuthorsController(IAuthorService authorService, ILogger<AuthorsController> logger)
         {
             _authorService = authorService;
+            _logger = logger;
         }
-        /// <summary>
-        /// Api to get all the Authors
-        /// </summary>
-        /// <returns></returns>
+
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<IEnumerable<Author>>> GetAllAuthors()
         {
-            var authors = await _authorService.GetAllAuthorsAsync();
-
-            return Ok(authors);
+            try
+            {
+                var authors = await _authorService.GetAllAuthorsAsync();
+                return Ok(authors);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while getting all authors.");
+                throw; // Allow the global error handler to handle the exception
+            }
         }
 
-        /// <summary>
-        /// Api to check author name exists or not
-        /// </summary>
-        /// <param name="name"></param>
-        /// <returns>return true if name exists</returns>
         [HttpGet("CheckAuthorNameIsExists/{name}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<bool>> CheckAuthorNameIsExists(string name)
         {
-
-            bool isExists = await _authorService.CheckAuthorNameIsExists(name);
-            return Ok(isExists);
-
+            try
+            {
+                bool isExists = await _authorService.CheckAuthorNameIsExists(name);
+                return Ok(isExists);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while checking if author name exists.");
+                throw;
+            }
         }
 
-        /// <summary>
-        /// Api to check auhtor name exists or not while updating author details
-        /// </summary>
-        /// <param name="id">updating author id</param>
-        /// <param name="name"> new author name</param>
-        /// <returns>return true if name exists</returns>
         [HttpGet("CheckAuthorNameIsExistsForUpdate/{id}/{name}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<bool>> CheckAuthorNameIsExistsForUpdate(int id,string name)
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult<bool>> CheckAuthorNameIsExistsForUpdate(int id, string name)
         {
-
-            bool isExists = await _authorService.CheckAuthorNameIsExistsForUpdate(id,name);
-            return Ok(isExists);
-
+            try
+            {
+                bool isExists = await _authorService.CheckAuthorNameIsExistsForUpdate(id, name);
+                return Ok(isExists);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while checking if author name exists for update.");
+                throw;
+            }
         }
 
-        /// <summary>
-        /// Api to check paricular author mapped in book
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>return true if it mapped</returns>
         [HttpGet("CheckAuthorExistsInBook/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<bool>> CheckAuthorExistsInBook(int id)
         {
-
-            bool isExists = await _authorService.CheckAuthorExistsInBook(id);
-            return Ok(isExists);
-
+            try
+            {
+                bool isExists = await _authorService.CheckAuthorExistsInBook(id);
+                return Ok(isExists);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while checking if author exists in book.");
+                throw;
+            }
         }
 
-        /// <summary>
-        /// Api to get particular auhtor by autthorID
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<Author>> GetAuthorById(int id)
         {
-            var author = await _authorService.GetAuthorByIdAsync(id);
-
-            if (author == null)
+            try
             {
-                return NotFound();
-            }
+                var author = await _authorService.GetAuthorByIdAsync(id);
+                if (author == null)
+                {
+                    _logger.LogWarning("Author with ID {Id} not found.", id);
+                    return NotFound();
+                }
 
-            return Ok(author);
+                return Ok(author);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while getting author by ID {Id}.", id);
+                throw;
+            }
         }
 
-        /// <summary>
-        /// Api to create new auhtor
-        /// </summary>
-        /// <param name="author"></param>
-        /// <returns>return new author with id</returns>
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<Author>> CreateAuthor(Author author)
         {
-            var createdAurthor = await _authorService.AddAuthorAsync(author);
-
-            if (createdAurthor)
+            if (!ModelState.IsValid)
             {
-                return CreatedAtAction(nameof(GetAuthorById), new { id = author.AuthorID }, author);
+                _logger.LogWarning("Invalid model state for CreateAuthor.");
+                return BadRequest(ModelState);
             }
+            try
+            {
+                var createdAuthor = await _authorService.AddAuthorAsync(author);
 
-            return BadRequest();
+                if (createdAuthor)
+                {
+                    _logger.LogInformation("Author {AuthorName} created successfully with ID {AuthorId}.", author.Name, author.AuthorID);
+                    return CreatedAtAction(nameof(GetAuthorById), new { id = author.AuthorID }, author);
+                }
+
+                _logger.LogWarning("Failed to create author {AuthorName}.", author.Name);
+                return BadRequest();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while creating a new author.");
+                throw;
+            }
         }
 
-        /// <summary>
-        /// Api to update particular author detail
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="author"></param>
-        /// <returns></returns>
-        // PUT: api/authors/5
         [HttpPut("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> UpdateAuthor(int id, Author author)
         {
-            if (id != author.AuthorID)
+            try
             {
-                return BadRequest();
-            }
+                if (id != author.AuthorID)
+                {
+                    _logger.LogWarning("Author ID mismatch. Provided ID: {Id}, Author ID: {AuthorId}.", id, author.AuthorID);
+                    return BadRequest();
+                }
 
-            var result = await _authorService.UpdateAuthorAsync(author);
-            if (!result)
+                var result = await _authorService.UpdateAuthorAsync(author);
+                if (!result)
+                {
+                    _logger.LogWarning("Author with ID {Id} not found for update.", id);
+                    return NotFound();
+                }
+
+                _logger.LogInformation("Author with ID {Id} updated successfully.", id);
+                return Ok(result);
+            }
+            catch (Exception ex)
             {
-                return NotFound();
+                _logger.LogError(ex, "Error occurred while updating author with ID {Id}.", id);
+                throw;
             }
-
-            return Ok(result);
         }
 
-        /// <summary>
-        /// Api to delete particular Author
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        // DELETE: api/authors/5
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> DeleteAuthor(int id)
         {
-            var result = await _authorService.DeleteAuthorAsync(id);
-            if (!result)
+            try
             {
-                return NotFound();
+                var result = await _authorService.DeleteAuthorAsync(id);
+                if (!result)
+                {
+                    _logger.LogWarning("Author with ID {Id} not found for deletion.", id);
+                    return NotFound();
+                }
+
+                _logger.LogInformation("Author with ID {Id} deleted successfully.", id);
+                return NoContent();
             }
-
-            return NoContent();
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while deleting author with ID {Id}.", id);
+                throw;
+            }
         }
-
     }
 }

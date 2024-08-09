@@ -6,10 +6,15 @@ import { useState } from "react";
 
 export default function DeleteBook({ show, handleClose, book }) {
   const [showDeleteAlert, setDeleteShowAlert] = useState(false);
+  const [closeModalAfterAlert, setCloseModalAfterAlert] = useState(false);
 const booksApiUrl = "https://localhost:7088/api/Books";
 
   function handleCloseAlert() {
     setDeleteShowAlert(false);
+    if (closeModalAfterAlert) {
+      handleClose();
+      setCloseModalAfterAlert(false); // Reset for the next use
+    }
   }
  
 
@@ -28,9 +33,10 @@ const booksApiUrl = "https://localhost:7088/api/Books";
         throw new Error("Network response was not ok");
       } else {
         setDeleteShowAlert(true);
-        console.log("book deleted successfully:", id);
-       
-        handleClose();
+      //  handleClose();
+       console.log("book deleted successfully:", id);
+         // Delay closing the modal to allow alert to be shown
+         setCloseModalAfterAlert(true);
       }
     } catch (error) {
       console.error("Failed to delete book:", error);

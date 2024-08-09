@@ -9,8 +9,33 @@ import Book from "./components/book";
 import Author from "./components/author";
 import Header from "./components/header";
 import Footer from "./components/footer";
+import { createNewToken } from './services/createtoken';
+import { setAPIToken } from './services/config'; // Import the setAPIToken function
+import  { useEffect, useState } from 'react';
 
 function App() {
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    // Define your credentials
+    const credentials = {
+      userName: 'karpagam',
+      password: 'karpagam',
+    };
+    console.log("app.js is loading");
+    // Fetch the token when the component mounts
+    createNewToken(credentials)
+      .then(response => {
+      
+        setToken(response); // Save the token in state
+        setAPIToken(response); // Set the token in config.js
+        console.log("token",response);
+      })
+      .catch(error => {
+        console.error("Error fetching token:", error);
+      });
+  }, []); // Empty dependency array ensures this runs only once when the component mounts
+
   return (
     <React.Fragment>
       <div className="hero_area">

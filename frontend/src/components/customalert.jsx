@@ -1,4 +1,5 @@
 import Modal from "react-bootstrap/Modal";
+import { Button } from "react-bootstrap";
 
 export default function CustomAlert({
   showAlert,
@@ -23,13 +24,16 @@ export default function CustomAlert({
         </Modal.Header>
         <Modal.Body className="custom-alert">
           <div className="container-fluid">
-            <div className="row" style={{ marginBottom: 15 }}>
+            <div className="row" style={{ marginBottom: 35 }}>
               <p>
                 {name} {action} successfully.
               </p>
             </div>
           </div>
         </Modal.Body>
+        <Modal.Footer className="custom-alert">
+      
+        </Modal.Footer>
       </Modal>
     </>
   );

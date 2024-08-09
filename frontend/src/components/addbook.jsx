@@ -30,6 +30,7 @@ export default function AddBook({ show, handleClose, errors, setErrors }) {
   const [maxDate, setMaxDate] = useState("");
   const [selectedLanguage, setSelectedLanguage] = useState("");
   const [selectedGenre, setSelectedGenre] = useState("");
+  const [closeModalAfterAlert, setCloseModalAfterAlert] = useState(false);
 
   const [file, setFile] = useState(null);
   const [preview, setPreview] = useState(null);
@@ -109,6 +110,10 @@ export default function AddBook({ show, handleClose, errors, setErrors }) {
 
   function handleCloseAlert() {
     setShowAlert(false);
+    if (closeModalAfterAlert) {
+      handleClose();
+      setCloseModalAfterAlert(false); // Reset for the next use
+    }
   }
   function handleLanguageChange(event) {
     const selectedLanguageId = event.target.value;
@@ -175,9 +180,10 @@ export default function AddBook({ show, handleClose, errors, setErrors }) {
         const newBook = await createNewData(booksApiUrl, book);
         setShowAlert(true);
         setBook({});
-        handleClose();
+       
         setPreview(null);
         setFile(null);
+        setCloseModalAfterAlert(true);
       } catch (error) {
         console.error("Failed to create book:", error);
       }

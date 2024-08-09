@@ -1,9 +1,12 @@
+import { getAPIToken } from './config';
+
 export function checkAuthorName(name) {
   return fetch(`https://localhost:7088/api/Authors/CheckAuthorNameIsExists/${name}`, {
     method: "GET",
     credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${getAPIToken()}`, // Get the token from config
     },
   })
     .then((response) => {
@@ -30,6 +33,7 @@ export function checkAuthorNameForEdit(id, name) {
       credentials: "same-origin",
       headers: {
         "Content-Type": "application/json",
+        "Authorization": `Bearer ${getAPIToken()}`, // Get the token from config
       },
     }
   )
@@ -55,6 +59,7 @@ export function checkAuthorExistsInBook(id) {
     credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${getAPIToken()}`, // Get the token from config
     },
   })
     .then((response) => {

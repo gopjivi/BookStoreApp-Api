@@ -261,9 +261,11 @@ D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookSt
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\BookStoreApp.Api.runtimeconfig.json
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\BookStoreApp.Api.dll
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\BookStoreApp.Api.pdb
+D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\BookStoreApp.xml
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\Azure.Core.dll
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\Azure.Identity.dll
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\Humanizer.dll
+D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
@@ -510,4 +512,3 @@ D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookSt
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\obj\Debug\net8.0\BookStoreApp.Api.pdb
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\obj\Debug\net8.0\BookStoreApp.Api.genruntimeconfig.cache
 D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\obj\Debug\net8.0\ref\BookStoreApp.Api.dll
-D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\bin\Debug\net8.0\BookStoreApp.xml

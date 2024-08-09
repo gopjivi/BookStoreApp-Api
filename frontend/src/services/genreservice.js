@@ -1,9 +1,12 @@
+import { getAPIToken } from './config';
+
 export function checkGenreName(name) {
   return fetch(`https://localhost:7088/api/Genres/CheckGenreNameIsExists/${name}`, {
     method: "GET",
     credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
+      "Authorization": `Bearer ${getAPIToken()}`, // Get the token from config
     },
   })
     .then((response) => {
