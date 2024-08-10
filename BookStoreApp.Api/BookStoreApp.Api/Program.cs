@@ -9,26 +9,41 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Newtonsoft.Json;
+using Serilog.Events;
+using Serilog;
 using System.Net;
 using System.Reflection;
+using BookStoreApp.Api.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 
-// Configure logging
-builder.Services.AddLogging(logging =>
-{
-    logging.ClearProviders(); // Optionally clear default providers
-    logging.AddConsole();     // Add console logging
-    logging.AddDebug();       // Add debug logging
-});
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+    .Enrich.FromLogContext()
+    .WriteTo.Console(LogEventLevel.Information) // Log to console
+   .WriteTo.File("Logs/log.txt", rollingInterval: RollingInterval.Day, restrictedToMinimumLevel: LogEventLevel.Information)  // Log Information and above to file
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
 
 builder.Services.AddControllers()
     .AddNewtonsoftJson(options =>
         options.SerializerSettings.ReferenceLoopHandling =
             Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+builder.Services.AddLogging(logging =>
+{
+    logging.ClearProviders(); // Clears default providers
+    logging.AddSerilog(); // Add Serilog as the logging provider
+}); 
+
+
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -113,8 +128,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// for unauthorized errors
+app.UseMiddleware<CustomUnauthorizedMiddleware>();
 
-//global error handling
+
+//for uuhandled errors
 
 app.UseExceptionHandler(appError =>
 {

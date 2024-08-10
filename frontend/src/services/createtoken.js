@@ -15,7 +15,7 @@ export async function createNewToken(data) {
         throw new Error(errorData.message || "Something went wrong");
       }
   
-      return await response.text();
+      return await response.json();
     } catch (error) {
       // Handle network or other errors
       console.error("Error creating new data:", error);

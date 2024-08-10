@@ -27,9 +27,9 @@ function App() {
     createNewToken(credentials)
       .then(response => {
       
-        setToken(response); // Save the token in state
-        setAPIToken(response); // Set the token in config.js
-        console.log("token",response);
+        setToken(response.Token); // Save the token in state
+        setAPIToken(response.Token); // Set the token in config.js
+        console.log("token",response.Token);
       })
       .catch(error => {
         console.error("Error fetching token:", error);

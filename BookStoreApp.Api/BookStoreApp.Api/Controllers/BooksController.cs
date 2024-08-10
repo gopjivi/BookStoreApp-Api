@@ -101,6 +101,13 @@ namespace BookStoreApp.Api.Controllers
         {
             try
             {
+                // Check if the model state is valid
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model state for book creation. Book title: {BookTitle}.", book.Title);
+                    return BadRequest(ModelState);
+                }
+
                 _logger.LogInformation("Creating a new book.");
 
                 var createdBook = await _bookService.AddBookAsync(book);
@@ -137,6 +144,13 @@ namespace BookStoreApp.Api.Controllers
         {
             try
             {
+                // Check if the model state is valid
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model state for book update. Book title: {BookTitle}.", book.Title);
+                    return BadRequest(ModelState);
+                }
+
                 if (id != book.BookID)
                 {
                     _logger.LogWarning($"Book ID in URL ({id}) does not match ID in body ({book.BookID}).");

@@ -16,62 +16,74 @@ namespace BookStoreApp.Api.Controllers
             public string? Password { get; set; }
         }
 
-        private IConfiguration _configuration;
+        private readonly IConfiguration _configuration;
+        private readonly ILogger<AuthenticationController> _logger;
 
-        public AuthenticationController(IConfiguration configuration)
+        public AuthenticationController(IConfiguration configuration, ILogger<AuthenticationController> logger)
         {
-            _configuration = configuration ??
-                throw new ArgumentNullException(nameof(configuration));
+            _configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
-
+        /// <summary>
+        ///Validates user credentials and returns a JWT token if valid.
+        /// </summary>
+        /// <param name="authenticationRequestBody">The user's login details</param>
+        /// <returns>A JWT token if credentials are valid; otherwise, Unauthorized.</returns>
         [HttpPost("Authenticate")]
         public ActionResult<string> Authenticate(AuthenticationRequestBody authenticationRequestBody)
         {
-            //validating user
-            bool user = ValidateUserCredentials(authenticationRequestBody.UserName, authenticationRequestBody.Password);
+            // Log the start of the authentication process
+            _logger.LogInformation("Starting authentication for user: {UserName}", authenticationRequestBody.UserName);
 
-            if (!user)
+            // Validate user credentials
+            bool isValidUser = ValidateUserCredentials(authenticationRequestBody.UserName, authenticationRequestBody.Password);
+
+            if (!isValidUser)
             {
-                return Unauthorized();
+                _logger.LogWarning("Authentication failed for user: {UserName}. Invalid credentials provided.", authenticationRequestBody.UserName);
+                return Unauthorized("Invalid username or password.");
             }
 
-            //creating token
-            var securityKey = new SymmetricSecurityKey(
-              Convert.FromBase64String(_configuration["Authentication:SecretForKey"]));
+            // Log the creation of the JWT token
+            _logger.LogInformation("Creating JWT token for user: {UserName}", authenticationRequestBody.UserName);
 
-            var signingCredentials = new SigningCredentials(
-                securityKey, SecurityAlgorithms.HmacSha256);
+            // Create token
+            var securityKey = new SymmetricSecurityKey(Convert.FromBase64String(_configuration["Authentication:SecretForKey"]));
+            var signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            var claimsForToken = new List<Claim>();
-
-            claimsForToken.Add(new Claim("user", authenticationRequestBody.UserName));
-            claimsForToken.Add(new Claim("Application_name", "NovelNook"));
-          
-
+            var claimsForToken = new List<Claim>
+            {
+                new Claim("user", authenticationRequestBody.UserName),
+                new Claim("Application_name", "NovelNook")
+            };
 
             var jwtSecurityToken = new JwtSecurityToken(
-               _configuration["Authentication:Issuer"],
-               _configuration["Authentication:Audience"],
-               claimsForToken,
-               DateTime.UtcNow,
-               DateTime.UtcNow.AddHours(1),
-               signingCredentials);
+                _configuration["Authentication:Issuer"],
+                _configuration["Authentication:Audience"],
+                claimsForToken,
+                expires: DateTime.UtcNow.AddHours(1),
+                signingCredentials: signingCredentials);
 
-            var tokenToReturn = new JwtSecurityTokenHandler()
-               .WriteToken(jwtSecurityToken);
+            var tokenToReturn = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken);
 
-            return Ok(tokenToReturn);
+            _logger.LogInformation("Successfully created JWT token for user: {UserName}", authenticationRequestBody.UserName);
 
+            return Ok(new { Token = tokenToReturn, Message = "Authentication successful" });
         }
 
         private bool ValidateUserCredentials(string? userName, string? password)
         {
-            if(userName=="karpagam" && password =="karpagam")
+            // Log the credentials validation process
+            _logger.LogInformation("Validating credentials for user: {UserName}", userName);
+
+            if (userName == "karpagam" && password == "karpagam")
             {
+                _logger.LogInformation("Credentials validated successfully for user: {UserName}", userName);
                 return true;
             }
+
+            _logger.LogWarning("Failed to validate credentials for user: {UserName}", userName);
             return false;
         }
-
     }
 }

@@ -4,6 +4,13 @@
         <name>BookStoreApp.Api</name>
     </assembly>
     <members>
+        <member name="M:BookStoreApp.Api.Controllers.AuthenticationController.Authenticate(BookStoreApp.Api.Controllers.AuthenticationController.AuthenticationRequestBody)">
+             <summary>
+            Validates user credentials and returns a JWT token if valid.
+             </summary>
+             <param name="authenticationRequestBody">The user's login details</param>
+             <returns>A JWT token if credentials are valid; otherwise, Unauthorized.</returns>
+        </member>
         <member name="M:BookStoreApp.Api.Controllers.AuthorsController.GetAllAuthors">
             <summary>
             Api to get all the Author details

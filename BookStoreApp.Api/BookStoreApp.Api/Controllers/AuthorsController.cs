@@ -195,6 +195,12 @@ namespace BookStoreApp.Api.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model state for author update. Author ID: {AuthorId}.", author.AuthorID);
+                    return BadRequest(ModelState);
+                }
+
                 if (id != author.AuthorID)
                 {
                     _logger.LogWarning("Author ID mismatch. Provided ID: {Id}, Author ID: {AuthorId}.", id, author.AuthorID);

@@ -147,6 +147,12 @@ namespace BookStoreApp.Api.Controllers
         {
             try
             {
+                // Check if the model state is valid
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogWarning("Invalid model state for genre creation. Genre name: {GenreName}.", genre.GenreName);
+                    return BadRequest(ModelState);
+                }
                 _logger.LogInformation("Creating a new genre.");
 
                 var createdGenre = await _genreService.AddGenreAsync(genre);
