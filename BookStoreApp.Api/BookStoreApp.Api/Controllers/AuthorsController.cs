@@ -37,7 +37,7 @@ namespace BookStoreApp.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while getting all authors.");
-                throw; // Allow the global error handler to handle the exception
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
 
@@ -60,7 +60,7 @@ namespace BookStoreApp.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while checking if author name exists.");
-                throw;
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
 
@@ -84,7 +84,7 @@ namespace BookStoreApp.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while checking if author name exists for update.");
-                throw;
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
 
@@ -108,7 +108,7 @@ namespace BookStoreApp.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while checking if author exists in book.");
-                throw;
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
 
@@ -138,7 +138,7 @@ namespace BookStoreApp.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while getting author by ID {Id}.", id);
-                throw;
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
 
@@ -175,7 +175,7 @@ namespace BookStoreApp.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while creating a new author.");
-                throw;
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
 
@@ -220,7 +220,7 @@ namespace BookStoreApp.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while updating author with ID {Id}.", id);
-                throw;
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
 
@@ -253,7 +253,7 @@ namespace BookStoreApp.Api.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while deleting author with ID {Id}.", id);
-                throw;
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
     }

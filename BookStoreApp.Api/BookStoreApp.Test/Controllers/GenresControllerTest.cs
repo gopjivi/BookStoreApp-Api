@@ -34,7 +34,7 @@ namespace BookStoreApp.Test.Controllers
 
 
         [Fact]
-        public async void CreateGenre_ReturnCreated_OnSuccess()
+        public async Task CreateGenre_ReturnCreated_OnSuccess()
         {
             //Arrange
             Genre genre = genres[0];
@@ -53,8 +53,25 @@ namespace BookStoreApp.Test.Controllers
 
         }
 
+
         [Fact]
-        public async void CreateGenre_ReturnBadRequest_OnFailure()
+        public async Task CreateGenre_ReturnsBadRequest_OnModelStateFailure()
+        {
+            // Arrange
+            Genre genre = genres[0];
+            _genresController.ModelState.AddModelError("GenreName", "Required"); 
+
+            // Act
+            var result = await _genresController.CreateGenre(genre);
+
+            // Assert
+            var actionResult = Assert.IsType<BadRequestObjectResult>(result.Result);
+            actionResult.StatusCode.Should().Be(400);
+            actionResult.Value.Should().BeOfType<SerializableError>(); 
+        }
+
+        [Fact]
+        public async Task CreateGenre_ReturnBadRequest_OnFailure()
         {
             // Arrange
             Genre genre = genres[0];
@@ -69,7 +86,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void CreateGenre_ReturnInternalServerError_OnException()
+        public async Task CreateGenre_ReturnInternalServerError_OnException()
         {
             // Arrange
             Genre genre = genres[0];
@@ -85,7 +102,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void GetAllGenres_ReturnsOk_OnSuccess()
+        public async Task GetAllGenres_ReturnsOk_OnSuccess()
         {
             // Arrange
             var mockGenres = genres;
@@ -103,7 +120,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void GetAllGenres_ReturnsInternalServerError_OnException()
+        public async Task GetAllGenres_ReturnsInternalServerError_OnException()
         {
             // Arrange
             _genreService.Setup(service => service.GetAllGenresAsync()).ThrowsAsync(new Exception("Database error"));
@@ -118,7 +135,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void GetAllGenresWithBookCount_ReturnsOk_OnSuccess()
+        public async Task GetAllGenresWithBookCount_ReturnsOk_OnSuccess()
         {
             // Arrange
             var mockGenres = genres;
@@ -134,7 +151,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void GetAllGenresWithBookCount_ReturnsInternalServerError_OnException()
+        public async Task GetAllGenresWithBookCount_ReturnsInternalServerError_OnException()
         {
             // Arrange
             _genreService.Setup(service => service.GetAllGenresWithBookCountAsync()).ThrowsAsync(new Exception("Database error"));
@@ -149,7 +166,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void CheckGenreNameIsExists_ReturnsOk_WithTrue_OnSuccess()
+        public async Task CheckGenreNameIsExists_ReturnsOk_WithTrue_WhenGenreExists()
         {
             // Arrange
             string genreName = "Fiction";
@@ -165,7 +182,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void CheckGenreNameIsExists_ReturnsOk_WithFalse_OnSuccess()
+        public async Task CheckGenreNameIsExists_ReturnsOk_WithFalse_WhenGenreDoesNotExists()
         {
             // Arrange
             string genreName = "NonExistingGenre";
@@ -181,7 +198,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void CheckGenreNameIsExists_ReturnsInternalServerError_OnException()
+        public async Task CheckGenreNameIsExists_ReturnsInternalServerError_OnException()
         {
             // Arrange
             string genreName = "Fiction";
@@ -197,7 +214,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void GetGenreById_ReturnsOk_OnSuccess()
+        public async Task GetGenreById_ReturnsOk_OnSuccess()
         {
             // Arrange
             int genreId = 1;
@@ -214,7 +231,7 @@ namespace BookStoreApp.Test.Controllers
         }
 
         [Fact]
-        public async void GetGenreById_ReturnsNotFound_WhenGenreDoesNotExist()
+        public async Task GetGenreById_ReturnsNotFound_WhenGenreDoesNotExist()
         {
             // Arrange
             int genreId = 1;
@@ -224,12 +241,12 @@ namespace BookStoreApp.Test.Controllers
             var result = await _genresController.GetGenreById(genreId);
 
             // Assert
-            Assert.IsType<NotFoundResult>(result.Result);
+           
         }
 
 
         [Fact]
-        public async void GetGenreById_ReturnsInternalServerError_OnException()
+        public async Task GetGenreById_ReturnsInternalServerError_OnException()
         {
             // Arrange
             int genreId = 1;

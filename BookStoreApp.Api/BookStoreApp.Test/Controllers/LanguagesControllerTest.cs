@@ -39,7 +39,7 @@ namespace BookStoreApp.Test.Controllers
             var mockLanguages = languages;
 
             _languageService.Setup(service => service.GetAllLanguagesAsync())
-                                .ReturnsAsync(languages);
+                                .ReturnsAsync(mockLanguages);
 
             // Act
             var result = await _languagesController.GetAllLanguages();
