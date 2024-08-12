@@ -46,5 +46,18 @@ namespace BookStoreApp.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
+
+        /// <summary>
+        /// Demo for Global error handlers
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        [HttpGet("cause-error")]
+        public IActionResult CauseError()
+        {
+            _logger.LogError("This is a test exception for demonstration purposes");
+            throw new Exception("This is a test exception for demonstration purposes.");
+        }
+
     }
 }

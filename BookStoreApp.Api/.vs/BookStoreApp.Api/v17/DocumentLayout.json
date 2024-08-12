@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\logs\\log20240810.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\logs\\log20240810.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\controllers\\languagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\controllers\\languagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +35,8 @@
       "RelativeMoniker": "D:0:0:{78953DC6-289C-4F6D-9FE8-05B6DB25591D}|BookStoreApp.Test\\BookStoreApp.Test.csproj|solutionrelative:bookstoreapp.test\\bookstoreapp.test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{78953DC6-289C-4F6D-9FE8-05B6DB25591D}|BookStoreApp.Test\\BookStoreApp.Test.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.test\\controllers\\genrescontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78953DC6-289C-4F6D-9FE8-05B6DB25591D}|BookStoreApp.Test\\BookStoreApp.Test.csproj|solutionrelative:bookstoreapp.test\\controllers\\genrescontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\controllers\\genrescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\repositories\\genrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\repositories\\genrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.api\\controllers\\languagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0FFFCFD-2484-484E-A362-A2438607B758}|BookStoreApp.Api\\BookStoreApp.Api.csproj|solutionrelative:bookstoreapp.api\\controllers\\languagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78953DC6-289C-4F6D-9FE8-05B6DB25591D}|BookStoreApp.Test\\BookStoreApp.Test.csproj|d:\\users\\karpagam\\react-csharp-capstone\\bookstoreapp-api\\bookstoreapp.api\\bookstoreapp.test\\controllers\\authorscontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,50 +78,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "log20240810.txt",
-              "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Logs\\log20240810.txt",
-              "RelativeDocumentMoniker": "BookStoreApp.Api\\Logs\\log20240810.txt",
-              "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Logs\\log20240810.txt",
-              "RelativeToolTip": "BookStoreApp.Api\\Logs\\log20240810.txt",
-              "ViewState": "AQIAAKYBAAAANjMzM5MwwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-08-12T12:02:18.804Z",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "BookStoreApp.Api\\appsettings.json",
+              "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\appsettings.json",
+              "RelativeToolTip": "BookStoreApp.Api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-12T15:08:07.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "BookStoreApp.Api\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "BookStoreApp.Api\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-12T15:07:58.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Program.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Program.cs",
               "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Program.cs",
               "RelativeToolTip": "BookStoreApp.Api\\Program.cs",
-              "ViewState": "AQIAAAsAAABAcpmZmZkOwFEAAABDAAAA",
+              "ViewState": "AQIAAHMAAAAAxczMzAwswI0AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T10:18:52.965Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BookStoreApp.Test",
-              "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Test\\BookStoreApp.Test.csproj",
-              "RelativeDocumentMoniker": "BookStoreApp.Test\\BookStoreApp.Test.csproj",
-              "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Test\\BookStoreApp.Test.csproj",
-              "RelativeToolTip": "BookStoreApp.Test\\BookStoreApp.Test.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-12T10:04:44.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Book.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Models\\Book.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Models\\Book.cs",
@@ -125,12 +133,7 @@
               "RelativeToolTip": "BookStoreApp.Api\\Models\\Book.cs",
               "ViewState": "AQIAAAAAAACA/v///38pwB0AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T09:27:32.554Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2024-08-12T09:27:32.554Z"
             },
             {
               "$type": "Document",
@@ -140,14 +143,14 @@
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Controllers\\AuthenticationController.cs",
               "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Controllers\\AuthenticationController.cs",
               "RelativeToolTip": "BookStoreApp.Api\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AQIAAC4AAACAzMzMzIwgwEAAAAAoAAAA",
+              "ViewState": "AQIAAC4AAACAzMzMzIwgwEgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T07:30:24.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "GenreRepository.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Repositories\\GenreRepository.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Repositories\\GenreRepository.cs",
@@ -155,25 +158,24 @@
               "RelativeToolTip": "BookStoreApp.Api\\Repositories\\GenreRepository.cs",
               "ViewState": "AQIAADUAAABA/////38lwFAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T06:23:35.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T06:23:35.066Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
               "Title": "LanguagesController.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Controllers\\LanguagesController.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Controllers\\LanguagesController.cs",
               "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Controllers\\LanguagesController.cs",
               "RelativeToolTip": "BookStoreApp.Api\\Controllers\\LanguagesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAAAAAA",
+              "ViewState": "AQIAACIAAADAy8zMzKwwwDkAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-12T05:57:24.79Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "GenreService.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Services\\GenreService.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Services\\GenreService.cs",
@@ -181,12 +183,36 @@
               "RelativeToolTip": "BookStoreApp.Api\\Services\\GenreService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T05:42:46.823Z",
+              "WhenOpened": "2024-08-12T05:42:46.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GenresController.cs",
+              "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Controllers\\GenresController.cs",
+              "RelativeDocumentMoniker": "BookStoreApp.Api\\Controllers\\GenresController.cs",
+              "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Controllers\\GenresController.cs",
+              "RelativeToolTip": "BookStoreApp.Api\\Controllers\\GenresController.cs",
+              "ViewState": "AQIAAH0AAACAmZmZmVknwLgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-11T05:31:14.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 7,
+              "Title": "BookStoreApp.Test.csproj",
+              "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Test\\BookStoreApp.Test.csproj",
+              "RelativeDocumentMoniker": "BookStoreApp.Test\\BookStoreApp.Test.csproj",
+              "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Test\\BookStoreApp.Test.csproj",
+              "RelativeToolTip": "BookStoreApp.Test\\BookStoreApp.Test.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-12T10:04:44.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "BookService.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Services\\BookService.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Services\\BookService.cs",
@@ -194,25 +220,11 @@
               "RelativeToolTip": "BookStoreApp.Api\\Services\\BookService.cs",
               "ViewState": "AQIAABkAAACAmZmZmRk1wDgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T05:26:34.413Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T05:26:34.413Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "GenresController.cs",
-              "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Controllers\\GenresController.cs",
-              "RelativeDocumentMoniker": "BookStoreApp.Api\\Controllers\\GenresController.cs",
-              "ToolTip": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Controllers\\GenresController.cs",
-              "RelativeToolTip": "BookStoreApp.Api\\Controllers\\GenresController.cs",
-              "ViewState": "AQIAAI4AAADAu8zMzEwtwKQAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T05:31:14.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "BooksController.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Controllers\\BooksController.cs",
@@ -220,12 +232,11 @@
               "RelativeToolTip": "BookStoreApp.Api\\Controllers\\BooksController.cs",
               "ViewState": "AQIAAE0AAAAAzMzMzGwwwF8AAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T10:01:31.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-11T10:01:31.431Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "GenresControllerTest.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Test\\Controllers\\GenresControllerTest.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Test\\Controllers\\GenresControllerTest.cs",
@@ -233,12 +244,11 @@
               "RelativeToolTip": "BookStoreApp.Test\\Controllers\\GenresControllerTest.cs",
               "ViewState": "AQIAAEUAAACA/P///78hwFwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-10T15:54:07.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-10T15:54:07.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "BookStoreDbContext.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\DbContexts\\BookStoreDbContext.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\DbContexts\\BookStoreDbContext.cs",
@@ -246,12 +256,11 @@
               "RelativeToolTip": "BookStoreApp.Api\\DbContexts\\BookStoreDbContext.cs",
               "ViewState": "AQIAAAIAAAAAAAAAAAAowBMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T04:13:34.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T04:13:34.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "AuthorsController.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Controllers\\AuthorsController.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Controllers\\AuthorsController.cs",
@@ -259,12 +268,11 @@
               "RelativeToolTip": "BookStoreApp.Api\\Controllers\\AuthorsController.cs",
               "ViewState": "AQIAABQAAABAy8zMzMwVwCkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T05:37:24.712Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-11T05:37:24.712Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "AuthorsControllerTest.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Test\\Controllers\\AuthorsControllerTest.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Test\\Controllers\\AuthorsControllerTest.cs",
@@ -272,12 +280,11 @@
               "RelativeToolTip": "BookStoreApp.Test\\Controllers\\AuthorsControllerTest.cs",
               "ViewState": "AQIAABEAAAAAMzMzM5MwwDYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-11T04:58:02.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-11T04:58:02.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "BookRepository.cs",
               "DocumentMoniker": "D:\\Users\\karpagam\\React-Csharp-Capstone\\BookStoreApp-Api\\BookStoreApp.Api\\BookStoreApp.Api\\Repositories\\BookRepository.cs",
               "RelativeDocumentMoniker": "BookStoreApp.Api\\Repositories\\BookRepository.cs",
@@ -285,8 +292,7 @@
               "RelativeToolTip": "BookStoreApp.Api\\Repositories\\BookRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-12T05:27:01.471Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-12T05:27:01.471Z"
             }
           ]
         }

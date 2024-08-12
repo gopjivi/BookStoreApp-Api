@@ -142,6 +142,13 @@
             </summary>
             <returns>return all the languages</returns>
         </member>
+        <member name="M:BookStoreApp.Api.Controllers.LanguagesController.CauseError">
+            <summary>
+            Demo for Global error handlers
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
         <member name="T:BookStoreApp.Api.Migrations.initalmigration">
             <inheritdoc />
         </member>

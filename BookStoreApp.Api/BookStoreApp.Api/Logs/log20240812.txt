@@ -1413,3 +1413,568 @@ System.InvalidOperationException: Headers are read-only, response has already st
 2024-08-12 18:26:14.362 +05:30 [INF] Successfully fetched all genres.
 2024-08-12 18:26:14.420 +05:30 [INF] Fetching all books.
 2024-08-12 18:26:14.923 +05:30 [INF] Successfully fetched all books.
+2024-08-12 20:33:53.460 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 20:33:53.556 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 20:33:53.565 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 20:33:53.566 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 20:33:53.580 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 20:39:18.642 +05:30 [ERR] An error occurred using the connection to database 'BookStore' on server 'WSAMZN-8P0C1RTJ'.
+2024-08-12 20:39:18.688 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'BookStoreApp.Api.DbContexts.BookStoreDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'saa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:61a41165-a088-4e90-af96-5d9c46dc0172
+Error Number:18456,State:1,Class:14
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'saa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:61a41165-a088-4e90-af96-5d9c46dc0172
+Error Number:18456,State:1,Class:14
+2024-08-12 20:39:18.762 +05:30 [ERR] Error occurred while getting author by ID 31.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'saa'.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at BookStoreApp.Api.Repositories.AuthorRepository.GetAuthorByIdAsync(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Repositories\AuthorRepository.cs:line 22
+   at BookStoreApp.Api.Services.AuthorService.GetAuthorByIdAsync(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\AuthorService.cs:line 48
+   at BookStoreApp.Api.Controllers.AuthorsController.GetAuthorById(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\AuthorsController.cs:line 129
+ClientConnectionId:61a41165-a088-4e90-af96-5d9c46dc0172
+Error Number:18456,State:1,Class:14
+2024-08-12 20:47:32.973 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 20:47:33.072 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 20:47:33.079 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 20:47:33.092 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 20:47:33.112 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 20:48:37.534 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 20:48:37.802 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 20:48:37.804 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 20:48:37.806 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 20:48:37.809 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 20:52:20.963 +05:30 [INF] Fetching all books.
+2024-08-12 20:52:21.263 +05:30 [INF] Successfully fetched all books.
+2024-08-12 20:54:09.422 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 20:54:09.508 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 20:54:09.565 +05:30 [WRN] Failed to validate credentials for user: karpagam
+2024-08-12 20:54:09.568 +05:30 [WRN] Authentication failed for user: karpagam. Invalid credentials provided.
+2024-08-12 20:54:09.577 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-12 20:54:09.636 +05:30 [WRN] The response has already started, the error page middleware will not be executed.
+2024-08-12 20:54:09.647 +05:30 [ERR] Connection id "0HN5QS6NQ65GO", Request id "0HN5QS6NQ65GO:0000000C": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2024-08-12 20:54:25.757 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 20:54:25.791 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 20:54:25.802 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 20:54:25.807 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 20:54:25.812 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 20:55:23.391 +05:30 [INF] Fetching all books.
+2024-08-12 20:55:23.457 +05:30 [INF] Successfully fetched all books.
+2024-08-12 20:55:33.225 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 20:55:33.323 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 20:58:25.598 +05:30 [INF] Starting authentication for user: string
+2024-08-12 20:58:25.695 +05:30 [INF] Validating credentials for user: string
+2024-08-12 20:58:25.698 +05:30 [WRN] Failed to validate credentials for user: string
+2024-08-12 20:58:25.700 +05:30 [WRN] Authentication failed for user: string. Invalid credentials provided.
+2024-08-12 20:58:25.704 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-12 20:58:25.739 +05:30 [WRN] The response has already started, the error page middleware will not be executed.
+2024-08-12 20:58:25.741 +05:30 [ERR] Connection id "0HN5QS6NQ65GT", Request id "0HN5QS6NQ65GT:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2024-08-12 20:59:02.747 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 20:59:02.750 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 20:59:02.753 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 20:59:02.759 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 20:59:02.761 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 21:02:13.140 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 21:02:13.142 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 21:02:13.148 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 21:02:13.149 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 21:02:13.152 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 21:02:13.154 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 21:02:13.158 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 21:02:13.156 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 21:02:13.163 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 21:02:13.161 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 21:02:19.651 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:02:19.683 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:02:19.743 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:02:19.803 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:03:23.885 +05:30 [INF] Author tezs created successfully with ID 40.
+2024-08-12 21:05:16.447 +05:30 [INF] Fetching all books.
+2024-08-12 21:05:16.457 +05:30 [INF] Fetching all genres.
+2024-08-12 21:05:16.486 +05:30 [INF] Fetching all languages.
+2024-08-12 21:05:16.532 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:05:16.965 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:05:17.536 +05:30 [INF] Fetching all languages.
+2024-08-12 21:05:17.537 +05:30 [INF] Fetching all genres.
+2024-08-12 21:05:17.551 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:05:17.728 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:05:17.765 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:05:17.818 +05:30 [INF] Fetching all books.
+2024-08-12 21:05:19.054 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:05:21.277 +05:30 [INF] Fetching all genres.
+2024-08-12 21:05:21.280 +05:30 [INF] Fetching book with ID 47.
+2024-08-12 21:05:21.407 +05:30 [INF] Fetching all languages.
+2024-08-12 21:05:21.635 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:05:21.665 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:05:21.699 +05:30 [INF] Successfully fetched book with ID 47.
+2024-08-12 21:05:21.990 +05:30 [INF] Fetching all genres.
+2024-08-12 21:05:21.990 +05:30 [INF] Fetching all languages.
+2024-08-12 21:05:22.179 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:05:22.182 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:05:37.904 +05:30 [INF] Updating book with ID 47.
+2024-08-12 21:05:37.996 +05:30 [INF] Successfully updated book with ID 47.
+2024-08-12 21:05:40.524 +05:30 [INF] Fetching all books.
+2024-08-12 21:05:40.559 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:06:08.539 +05:30 [INF] Fetching all books.
+2024-08-12 21:06:08.543 +05:30 [INF] Fetching all genres.
+2024-08-12 21:06:08.699 +05:30 [INF] Fetching all languages.
+2024-08-12 21:06:08.874 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:06:08.875 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:06:08.939 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:06:09.090 +05:30 [INF] Fetching all genres.
+2024-08-12 21:06:09.090 +05:30 [INF] Fetching all languages.
+2024-08-12 21:06:09.510 +05:30 [INF] Fetching all books.
+2024-08-12 21:06:09.516 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:06:09.522 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:06:09.589 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:06:13.179 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:06:13.231 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:06:13.259 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:06:13.343 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:06:19.584 +05:30 [INF] Author with ID 40 deleted successfully.
+2024-08-12 21:06:37.088 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:06:37.268 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:06:37.334 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:06:37.431 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:25:54.035 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 58
+   at lambda_method5(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-12 21:25:54.212 +05:30 [ERR] An unhandled exception has occurred.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 58
+   at lambda_method5(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-12 21:26:57.788 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 58
+   at lambda_method5(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-12 21:26:57.836 +05:30 [ERR] An unhandled exception has occurred.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 58
+   at lambda_method5(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-12 21:30:29.558 +05:30 [ERR] This is a test exception for demonstration purposes
+2024-08-12 21:30:29.638 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 59
+   at lambda_method5(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-12 21:30:29.846 +05:30 [ERR] An unhandled exception has occurred.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 59
+   at lambda_method5(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-12 21:32:18.919 +05:30 [INF] Fetching all books.
+2024-08-12 21:32:19.078 +05:30 [INF] Fetching all genres.
+2024-08-12 21:32:19.577 +05:30 [INF] Fetching all languages.
+2024-08-12 21:32:20.868 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:32:20.891 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:32:20.949 +05:30 [INF] Fetching all languages.
+2024-08-12 21:32:20.954 +05:30 [INF] Fetching all genres.
+2024-08-12 21:32:21.214 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:32:21.227 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:32:21.301 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:32:21.555 +05:30 [INF] Fetching all books.
+2024-08-12 21:32:22.088 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:34:30.982 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 21:34:31.182 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 21:34:31.189 +05:30 [WRN] Failed to validate credentials for user: karpagam
+2024-08-12 21:34:31.192 +05:30 [WRN] Authentication failed for user: karpagam. Invalid credentials provided.
+2024-08-12 21:34:31.200 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-12 21:34:31.230 +05:30 [WRN] The response has already started, the error page middleware will not be executed.
+2024-08-12 21:34:31.237 +05:30 [ERR] Connection id "0HN5QSV464723", Request id "0HN5QSV464723:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2024-08-12 21:34:39.624 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 21:34:39.647 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 21:34:39.651 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 21:34:39.653 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 21:34:39.668 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 21:35:37.710 +05:30 [ERR] This is a test exception for demonstration purposes
+2024-08-12 21:35:37.876 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 59
+   at lambda_method5(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-12 21:35:37.935 +05:30 [ERR] An unhandled exception has occurred.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 59
+   at lambda_method5(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-12 21:36:58.714 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:36:59.070 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:36:59.112 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:36:59.180 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:37:03.111 +05:30 [INF] Fetching all books.
+2024-08-12 21:37:03.116 +05:30 [INF] Fetching all genres.
+2024-08-12 21:37:03.117 +05:30 [INF] Fetching all languages.
+2024-08-12 21:37:03.189 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:37:03.199 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:37:03.264 +05:30 [INF] Fetching all languages.
+2024-08-12 21:37:03.266 +05:30 [INF] Fetching all genres.
+2024-08-12 21:37:03.276 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:37:03.316 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:37:03.483 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:37:04.629 +05:30 [INF] Fetching all books.
+2024-08-12 21:37:05.460 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:41:11.954 +05:30 [INF] Fetching all books.
+2024-08-12 21:41:11.980 +05:30 [INF] Fetching all languages.
+2024-08-12 21:41:12.834 +05:30 [INF] Fetching all genres.
+2024-08-12 21:41:12.856 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:41:12.865 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:41:12.905 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:41:13.123 +05:30 [INF] Fetching all languages.
+2024-08-12 21:41:13.124 +05:30 [INF] Fetching all genres.
+2024-08-12 21:41:13.139 +05:30 [INF] Fetching all books.
+2024-08-12 21:41:14.171 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:41:14.180 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:41:14.254 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:41:20.761 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:41:20.799 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:41:20.869 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:41:20.952 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:41:26.109 +05:30 [INF] Fetching all books.
+2024-08-12 21:41:26.110 +05:30 [INF] Fetching all genres.
+2024-08-12 21:41:26.110 +05:30 [INF] Fetching all languages.
+2024-08-12 21:41:26.736 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:41:26.778 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:41:27.028 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:41:27.098 +05:30 [INF] Fetching all genres.
+2024-08-12 21:41:27.098 +05:30 [INF] Fetching all languages.
+2024-08-12 21:41:27.287 +05:30 [INF] Fetching all books.
+2024-08-12 21:41:27.352 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:41:27.353 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:41:27.576 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:41:28.817 +05:30 [INF] Fetching all genres.
+2024-08-12 21:41:28.817 +05:30 [INF] Fetching all languages.
+2024-08-12 21:41:29.088 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:41:29.089 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:41:29.133 +05:30 [INF] Fetching all languages.
+2024-08-12 21:41:29.133 +05:30 [INF] Fetching all genres.
+2024-08-12 21:41:29.331 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:41:29.333 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:42:07.373 +05:30 [INF] Creating a new book.
+2024-08-12 21:42:07.992 +05:30 [INF] Successfully created book with ID 48.
+2024-08-12 21:42:10.179 +05:30 [INF] Fetching all books.
+2024-08-12 21:42:10.226 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:42:12.828 +05:30 [INF] Fetching book with ID 48.
+2024-08-12 21:42:12.911 +05:30 [INF] Successfully fetched book with ID 48.
+2024-08-12 21:42:15.305 +05:30 [INF] Fetching all books.
+2024-08-12 21:42:15.318 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:42:17.396 +05:30 [INF] Fetching book with ID 48.
+2024-08-12 21:42:17.566 +05:30 [INF] Fetching all genres.
+2024-08-12 21:42:17.566 +05:30 [INF] Fetching all languages.
+2024-08-12 21:42:18.302 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:42:18.303 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:42:18.310 +05:30 [INF] Successfully fetched book with ID 48.
+2024-08-12 21:42:18.421 +05:30 [INF] Fetching all genres.
+2024-08-12 21:42:18.422 +05:30 [INF] Fetching all languages.
+2024-08-12 21:42:18.623 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:42:18.625 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:42:45.805 +05:30 [INF] Updating book with ID 48.
+2024-08-12 21:42:45.865 +05:30 [INF] Successfully updated book with ID 48.
+2024-08-12 21:42:48.562 +05:30 [INF] Fetching all books.
+2024-08-12 21:42:48.628 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:43:23.276 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:43:23.307 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:43:24.022 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:43:24.037 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:43:28.259 +05:30 [INF] Fetching all books.
+2024-08-12 21:43:28.261 +05:30 [INF] Fetching all genres.
+2024-08-12 21:43:28.554 +05:30 [INF] Fetching all languages.
+2024-08-12 21:43:28.827 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:43:28.832 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:43:28.872 +05:30 [INF] Fetching all genres.
+2024-08-12 21:43:28.873 +05:30 [INF] Fetching all languages.
+2024-08-12 21:43:29.081 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:43:29.139 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:43:29.139 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:43:29.140 +05:30 [INF] Fetching all books.
+2024-08-12 21:43:29.851 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:43:41.631 +05:30 [INF] Fetching all books.
+2024-08-12 21:43:41.631 +05:30 [INF] Fetching all languages.
+2024-08-12 21:43:41.657 +05:30 [INF] Fetching all genres.
+2024-08-12 21:43:41.898 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:43:41.898 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:43:41.929 +05:30 [INF] Fetching all genres.
+2024-08-12 21:43:41.929 +05:30 [INF] Fetching all languages.
+2024-08-12 21:43:41.952 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:43:41.952 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:43:42.000 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:43:42.060 +05:30 [INF] Fetching all books.
+2024-08-12 21:43:42.729 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:44:01.299 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:44:01.383 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:44:01.441 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:44:01.482 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:44:04.592 +05:30 [INF] Fetching all books.
+2024-08-12 21:44:04.592 +05:30 [INF] Fetching all genres.
+2024-08-12 21:44:04.793 +05:30 [INF] Fetching all languages.
+2024-08-12 21:44:04.864 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:44:04.872 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:44:04.895 +05:30 [INF] Fetching all genres.
+2024-08-12 21:44:04.895 +05:30 [INF] Fetching all languages.
+2024-08-12 21:44:04.919 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:44:04.920 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:44:05.161 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:44:05.399 +05:30 [INF] Fetching all books.
+2024-08-12 21:44:05.840 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:44:27.582 +05:30 [INF] Fetching all books.
+2024-08-12 21:44:27.682 +05:30 [INF] Fetching all genres.
+2024-08-12 21:44:27.696 +05:30 [INF] Fetching all languages.
+2024-08-12 21:44:27.839 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:44:27.842 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:44:27.900 +05:30 [INF] Fetching all genres.
+2024-08-12 21:44:27.902 +05:30 [INF] Fetching all languages.
+2024-08-12 21:44:27.919 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 21:44:27.920 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 21:44:27.990 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:44:28.088 +05:30 [INF] Fetching all books.
+2024-08-12 21:44:28.610 +05:30 [INF] Successfully fetched all books.
+2024-08-12 21:44:32.109 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:44:32.121 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 21:44:32.155 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 21:44:32.203 +05:30 [INF] Successfully fetched all genres with book count.
