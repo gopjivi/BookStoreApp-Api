@@ -26,13 +26,17 @@ namespace BookStoreApp.Api.Services
         public async Task<IEnumerable<Book>> GetAllBooksAsync()
         {
             IEnumerable<Book> books= await _bookRepository.GetAllBooksAsync();
-            foreach (Book book in books) {
-                if (book.BookImage != null)
+            foreach (Book book in books) 
+            {
+                if (book != null)
                 {
-                    string imageBase64Data = Convert.ToBase64String(book.BookImage);
-                    string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
-                  //  book.BookImage = null;
-                    book.BookImageURL = imageDataURL;
+                    if (book.BookImage != null)
+                    {
+                        string imageBase64Data = Convert.ToBase64String(book.BookImage);
+                        string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+                        //  book.BookImage = null;
+                        book.BookImageURL = imageDataURL;
+                    }
                 }
             }
             return books;
@@ -41,12 +45,15 @@ namespace BookStoreApp.Api.Services
         public async Task<Book> GetBookByIdAsync(int id)
         {
             Book book= await  _bookRepository.GetBookByIdAsync(id);
-            if (book.BookImage != null)
+            if (book != null)
             {
-                string imageBase64Data = Convert.ToBase64String(book.BookImage);
-                string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
-               // book.BookImage = null;
-                book.BookImageURL = imageDataURL;
+                if (book.BookImage != null)
+                {
+                    string imageBase64Data = Convert.ToBase64String(book.BookImage);
+                    string imageDataURL = string.Format("data:image/jpg;base64,{0}", imageBase64Data);
+                    // book.BookImage = null;
+                    book.BookImageURL = imageDataURL;
+                }
             }
             return book;
 

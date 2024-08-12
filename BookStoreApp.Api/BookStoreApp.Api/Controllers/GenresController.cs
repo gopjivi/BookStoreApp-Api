@@ -155,14 +155,22 @@ namespace BookStoreApp.Api.Controllers
                 }
                 _logger.LogInformation("Creating a new genre.");
 
-                var createdGenre = await _genreService.AddGenreAsync(genre);
-
-                if (createdGenre)
+                bool isExists = await _genreService.CheckGenreNameIsExists(genre.GenreName);
+                if (isExists)
                 {
-                    _logger.LogInformation($"Successfully created genre with ID {genre.GenreID}.");
-                    return CreatedAtAction(nameof(GetGenreById), new { id = genre.GenreID }, genre);
+                    _logger.LogWarning("Genre creation failed. Genre name already exists: {GenreName}.", genre.GenreName);
+                    return Conflict(new { Message = $"Genre with the name '{genre.GenreName}' already exists." });
                 }
+                else
+                {
+                    var createdGenre = await _genreService.AddGenreAsync(genre);
 
+                    if (createdGenre)
+                    {
+                        _logger.LogInformation($"Successfully created genre with ID {genre.GenreID}.");
+                        return CreatedAtAction(nameof(GetGenreById), new { id = genre.GenreID }, genre);
+                    }
+                }
                 _logger.LogWarning("Failed to create a new genre.");
                 return BadRequest();
             }

@@ -70,6 +70,24 @@ namespace BookStoreApp.Test.Controllers
             actionResult.Value.Should().BeOfType<SerializableError>(); 
         }
 
+
+        [Fact]
+        public async Task CreateGenre_ReturnsConflict_WhenGenreNameExists()
+        {
+            // Arrange
+            var genre = new Genre { GenreName = "Existing Genre" };
+            _genreService.Setup(service => service.CheckGenreNameIsExists(genre.GenreName)).ReturnsAsync(true);
+
+            // Act
+            var result = await _genresController.CreateGenre(genre);
+
+            // Assert
+            var actionResult = Assert.IsType<ConflictObjectResult>(result.Result);
+
+            actionResult.StatusCode.Should().Be(409);
+           
+        }
+
         [Fact]
         public async Task CreateGenre_ReturnBadRequest_OnFailure()
         {

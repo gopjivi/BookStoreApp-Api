@@ -224,7 +224,7 @@ var assemblies = [
       { "name": "BookStoreApp.Api.Controllers.AuthenticationController", "rp": "BookStoreApp.Api_AuthenticationController.html", "cl": 0, "ucl": 41, "cal": 41, "tl": 89, "cb": 0, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "BookStoreApp.Api.Controllers.AuthorsController", "rp": "BookStoreApp.Api_AuthorsController.html", "cl": 108, "ucl": 0, "cal": 108, "tl": 260, "cb": 14, "tb": 14, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "BookStoreApp.Api.Controllers.BooksController", "rp": "BookStoreApp.Api_BooksController.html", "cl": 88, "ucl": 0, "cal": 88, "tl": 214, "cb": 14, "tb": 14, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "BookStoreApp.Api.Controllers.GenresController", "rp": "BookStoreApp.Api_GenresController.html", "cl": 72, "ucl": 0, "cal": 72, "tl": 176, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "BookStoreApp.Api.Controllers.GenresController", "rp": "BookStoreApp.Api_GenresController.html", "cl": 79, "ucl": 0, "cal": 79, "tl": 184, "cb": 8, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "BookStoreApp.Api.Controllers.LanguagesController", "rp": "BookStoreApp.Api_LanguagesController.html", "cl": 16, "ucl": 0, "cal": 16, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "BookStoreApp.Api.DbContexts.BookStoreDbContext", "rp": "BookStoreApp.Api_BookStoreDbContext.html", "cl": 0, "ucl": 114, "cal": 114, "tl": 130, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware", "rp": "BookStoreApp.Api_CustomUnauthorizedMiddleware.html", "cl": 0, "ucl": 16, "cal": 16, "tl": 32, "cb": 0, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -245,7 +245,7 @@ var assemblies = [
       { "name": "BookStoreApp.Api.Repositories.GenreRepository", "rp": "BookStoreApp.Api_GenreRepository.html", "cl": 0, "ucl": 53, "cal": 53, "tl": 88, "cb": 0, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "BookStoreApp.Api.Repositories.LanguageRepository", "rp": "BookStoreApp.Api_LanguageRepository.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 22, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "BookStoreApp.Api.Services.AuthorService", "rp": "BookStoreApp.Api_AuthorService.html", "cl": 0, "ucl": 31, "cal": 31, "tl": 61, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "BookStoreApp.Api.Services.BookService", "rp": "BookStoreApp.Api_BookService.html", "cl": 0, "ucl": 38, "cal": 38, "tl": 66, "cb": 0, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "BookStoreApp.Api.Services.BookService", "rp": "BookStoreApp.Api_BookService.html", "cl": 0, "ucl": 45, "cal": 45, "tl": 73, "cb": 0, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "BookStoreApp.Api.Services.GenreService", "rp": "BookStoreApp.Api_GenreService.html", "cl": 0, "ucl": 28, "cal": 28, "tl": 56, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "BookStoreApp.Api.Services.LanguageService", "rp": "BookStoreApp.Api_LanguageService.html", "cl": 0, "ucl": 7, "cal": 7, "tl": 21, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "Program", "rp": "BookStoreApp.Api_Program.html", "cl": 0, "ucl": 114, "cal": 114, "tl": 170, "cb": 0, "tb": 4, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -257,9 +257,17 @@ var metrics = [{ "name": "Crap Score", "abbreviation": "crp", "explanationUrl": 
 var historicCoverageExecutionTimes = [];
 
 var riskHotspotMetrics = [
+      { "name": "Crap Score", "explanationUrl": "https://googletesting.blogspot.de/2011/02/this-code-is-crap.html" },
+      { "name": "Cyclomatic complexity", "explanationUrl": "https://en.wikipedia.org/wiki/Cyclomatic_complexity" },
 ];
 
 var riskHotspots = [
+  {
+    "assembly": "BookStoreApp.Api", "class": "BookStoreApp.Api.Services.BookService", "reportPath": "BookStoreApp.Api_BookService.html", "methodName": "GetAllBooksAsync()", "methodShortName": "GetAllBooksAsync()", "fileIndex": 0, "line": 27,
+    "metrics": [
+      { "value": 42, "exceeded": true },
+      { "value": 6, "exceeded": false },
+    ]},
 ];
 
 var branchCoverageAvailable = true;

@@ -74,7 +74,7 @@ namespace BookStoreApp.Api.Repositories
                     GenreID = g.Genre.GenreID,
                     GenreName = g.Genre.GenreName,
                     BookCount = g.Books.Count()
-                })
+                }).OrderByDescending(c => c.GenreID)
                 .ToListAsync();
 
             return result;

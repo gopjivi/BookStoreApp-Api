@@ -1,0 +1,1415 @@
+2024-08-12 09:58:42.052 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 09:58:42.282 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 09:58:42.289 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 09:58:42.290 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 09:58:42.414 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 09:59:25.790 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 09:59:25.807 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 09:59:25.809 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 09:59:25.815 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 09:59:25.819 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 10:02:24.105 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 10:02:24.181 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 10:02:24.186 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 10:02:24.220 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 10:02:24.237 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 10:05:55.748 +05:30 [INF] Author tes created successfully with ID 28.
+2024-08-12 10:07:09.667 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'BookStoreApp.Api.DbContexts.BookStoreDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Authors' with unique index 'IX_Authors_display_name'. The duplicate key value is (rwre).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:fe5c9ad5-a0b4-4145-9615-f9704177981f
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Authors' with unique index 'IX_Authors_display_name'. The duplicate key value is (rwre).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:fe5c9ad5-a0b4-4145-9615-f9704177981f
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-08-12 10:07:09.726 +05:30 [ERR] Error occurred while creating a new author.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Authors' with unique index 'IX_Authors_display_name'. The duplicate key value is (rwre).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:fe5c9ad5-a0b4-4145-9615-f9704177981f
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BookStoreApp.Api.Repositories.AuthorRepository.SaveChangesAsync() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Repositories\AuthorRepository.cs:line 80
+   at BookStoreApp.Api.Repositories.AuthorRepository.AddAuthorAsync(Author author) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Repositories\AuthorRepository.cs:line 27
+   at BookStoreApp.Api.Services.AuthorService.AddAuthorAsync(Author author) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\AuthorService.cs:line 18
+   at BookStoreApp.Api.Controllers.AuthorsController.CreateAuthor(Author author) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\AuthorsController.cs:line 164
+2024-08-12 10:07:35.943 +05:30 [INF] Author tezs created successfully with ID 30.
+2024-08-12 10:16:44.552 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'BookStoreApp.Api.DbContexts.BookStoreDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Authors' with unique index 'IX_Authors_display_name'. The duplicate key value is (string).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:fe5c9ad5-a0b4-4145-9615-f9704177981f
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Authors' with unique index 'IX_Authors_display_name'. The duplicate key value is (string).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:fe5c9ad5-a0b4-4145-9615-f9704177981f
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-08-12 10:16:44.632 +05:30 [ERR] Error occurred while updating author with ID 15.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Authors' with unique index 'IX_Authors_display_name'. The duplicate key value is (string).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:fe5c9ad5-a0b4-4145-9615-f9704177981f
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BookStoreApp.Api.Repositories.AuthorRepository.SaveChangesAsync() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Repositories\AuthorRepository.cs:line 80
+   at BookStoreApp.Api.Repositories.AuthorRepository.UpdateAuthorAsync(Author author) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Repositories\AuthorRepository.cs:line 32
+   at BookStoreApp.Api.Services.AuthorService.UpdateAuthorAsync(Author author) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\AuthorService.cs:line 58
+   at BookStoreApp.Api.Controllers.AuthorsController.UpdateAuthor(Int32 id, Author author) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\AuthorsController.cs:line 210
+2024-08-12 10:17:01.680 +05:30 [INF] Author with ID 15 updated successfully.
+2024-08-12 10:18:34.299 +05:30 [INF] Author with ID 15 updated successfully.
+2024-08-12 10:19:00.302 +05:30 [INF] Author with ID 16 deleted successfully.
+2024-08-12 10:19:54.550 +05:30 [WRN] Author with ID 16 not found for deletion.
+2024-08-12 10:20:00.885 +05:30 [WRN] Author with ID 17 not found for deletion.
+2024-08-12 10:20:06.469 +05:30 [WRN] Author with ID 18 not found for deletion.
+2024-08-12 10:20:15.219 +05:30 [WRN] Author with ID 35 not found for deletion.
+2024-08-12 10:21:31.505 +05:30 [INF] Fetching all languages.
+2024-08-12 10:21:31.580 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 10:22:25.420 +05:30 [INF] Fetching all languages.
+2024-08-12 10:22:25.433 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 10:22:49.065 +05:30 [INF] Fetching all genres.
+2024-08-12 10:22:49.139 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 10:23:28.256 +05:30 [INF] Fetching all genres.
+2024-08-12 10:23:28.374 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 10:24:11.964 +05:30 [INF] Creating a new genre.
+2024-08-12 10:24:12.005 +05:30 [INF] Successfully created genre with ID 14.
+2024-08-12 10:25:36.912 +05:30 [INF] Creating a new genre.
+2024-08-12 10:25:36.980 +05:30 [INF] Successfully created genre with ID 15.
+2024-08-12 10:25:56.647 +05:30 [INF] Creating a new genre.
+2024-08-12 10:25:56.771 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'BookStoreApp.Api.DbContexts.BookStoreDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Genres' with unique index 'IX_Genres_genre_name'. The duplicate key value is (newgenretest).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:fe5c9ad5-a0b4-4145-9615-f9704177981f
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Genres' with unique index 'IX_Genres_genre_name'. The duplicate key value is (newgenretest).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:fe5c9ad5-a0b4-4145-9615-f9704177981f
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-08-12 10:25:56.906 +05:30 [ERR] An error occurred while creating a new genre.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Genres' with unique index 'IX_Genres_genre_name'. The duplicate key value is (newgenretest).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:fe5c9ad5-a0b4-4145-9615-f9704177981f
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BookStoreApp.Api.Repositories.GenreRepository.SaveChangesAsync() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Repositories\GenreRepository.cs:line 85
+   at BookStoreApp.Api.Repositories.GenreRepository.AddGenreAsync(Genre genre) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Repositories\GenreRepository.cs:line 30
+   at BookStoreApp.Api.Services.GenreService.AddGenreAsync(Genre genre) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\GenreService.cs:line 18
+   at BookStoreApp.Api.Controllers.GenresController.CreateGenre(Genre genre) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\GenresController.cs:line 158
+2024-08-12 10:26:37.934 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 10:26:38.011 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 10:27:23.893 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 10:27:23.997 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 10:28:07.103 +05:30 [INF] Checking if genre name 'test' exists.
+2024-08-12 10:28:07.127 +05:30 [INF] Genre name 'test' exists: True.
+2024-08-12 10:28:56.004 +05:30 [INF] Checking if genre name 'tes' exists.
+2024-08-12 10:28:56.013 +05:30 [INF] Genre name 'tes' exists: False.
+2024-08-12 10:29:20.234 +05:30 [INF] Fetching genre with ID 1.
+2024-08-12 10:29:20.320 +05:30 [INF] Successfully fetched genre with ID 1.
+2024-08-12 10:30:03.530 +05:30 [INF] Fetching genre with ID 1.
+2024-08-12 10:30:03.578 +05:30 [INF] Successfully fetched genre with ID 1.
+2024-08-12 10:31:06.922 +05:30 [INF] Fetching all books.
+2024-08-12 10:31:07.112 +05:30 [INF] Successfully fetched all books.
+2024-08-12 10:31:38.966 +05:30 [INF] Fetching all books.
+2024-08-12 10:31:39.123 +05:30 [INF] Successfully fetched all books.
+2024-08-12 10:35:27.265 +05:30 [INF] Creating a new book.
+2024-08-12 10:35:27.333 +05:30 [INF] Successfully created book with ID 40.
+2024-08-12 10:36:05.538 +05:30 [INF] Fetching book with ID 1.
+2024-08-12 10:36:05.719 +05:30 [ERR] An error occurred while fetching book with ID 1.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BookStoreApp.Api.Services.BookService.GetBookByIdAsync(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\BookService.cs:line 44
+   at BookStoreApp.Api.Controllers.BooksController.GetBookById(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\BooksController.cs:line 72
+2024-08-12 10:36:43.412 +05:30 [INF] Fetching book with ID 1.
+2024-08-12 10:36:43.626 +05:30 [ERR] An error occurred while fetching book with ID 1.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BookStoreApp.Api.Services.BookService.GetBookByIdAsync(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\BookService.cs:line 44
+   at BookStoreApp.Api.Controllers.BooksController.GetBookById(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\BooksController.cs:line 72
+2024-08-12 10:37:05.631 +05:30 [INF] Fetching book with ID 1.
+2024-08-12 10:37:05.700 +05:30 [ERR] An error occurred while fetching book with ID 1.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BookStoreApp.Api.Services.BookService.GetBookByIdAsync(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\BookService.cs:line 44
+   at BookStoreApp.Api.Controllers.BooksController.GetBookById(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\BooksController.cs:line 72
+2024-08-12 10:37:12.160 +05:30 [INF] Fetching book with ID 30.
+2024-08-12 10:37:12.319 +05:30 [ERR] An error occurred while fetching book with ID 30.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BookStoreApp.Api.Services.BookService.GetBookByIdAsync(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\BookService.cs:line 44
+   at BookStoreApp.Api.Controllers.BooksController.GetBookById(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\BooksController.cs:line 72
+2024-08-12 10:39:09.775 +05:30 [INF] Fetching book with ID 11.
+2024-08-12 10:39:10.720 +05:30 [INF] Successfully fetched book with ID 11.
+2024-08-12 10:41:15.378 +05:30 [INF] Updating book with ID 11.
+2024-08-12 10:41:15.569 +05:30 [INF] Successfully updated book with ID 11.
+2024-08-12 10:42:35.299 +05:30 [INF] Updating book with ID 11.
+2024-08-12 10:42:35.444 +05:30 [INF] Successfully updated book with ID 11.
+2024-08-12 10:42:43.989 +05:30 [INF] Updating book with ID 11.
+2024-08-12 10:42:44.011 +05:30 [INF] Successfully updated book with ID 11.
+2024-08-12 10:43:13.160 +05:30 [INF] Deleting book with ID 40.
+2024-08-12 10:43:13.238 +05:30 [INF] Successfully deleted book with ID 40.
+2024-08-12 10:44:39.074 +05:30 [INF] Deleting book with ID 40.
+2024-08-12 10:44:39.180 +05:30 [WRN] Book with ID 40 not found for deletion.
+2024-08-12 10:44:55.251 +05:30 [INF] Deleting book with ID 38.
+2024-08-12 10:44:55.576 +05:30 [INF] Successfully deleted book with ID 38.
+2024-08-12 10:46:53.888 +05:30 [INF] Fetching book with ID 40.
+2024-08-12 10:46:54.137 +05:30 [ERR] An error occurred while fetching book with ID 40.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BookStoreApp.Api.Services.BookService.GetBookByIdAsync(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\BookService.cs:line 44
+   at BookStoreApp.Api.Controllers.BooksController.GetBookById(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\BooksController.cs:line 72
+2024-08-12 10:54:29.524 +05:30 [INF] Fetching book with ID 40.
+2024-08-12 10:54:29.714 +05:30 [ERR] An error occurred while fetching book with ID 40.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BookStoreApp.Api.Services.BookService.GetBookByIdAsync(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\BookService.cs:line 44
+   at BookStoreApp.Api.Controllers.BooksController.GetBookById(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\BooksController.cs:line 72
+2024-08-12 10:55:31.677 +05:30 [WRN] Author with ID 31 not found.
+2024-08-12 10:55:57.843 +05:30 [INF] Fetching book with ID 40.
+2024-08-12 10:55:57.871 +05:30 [ERR] An error occurred while fetching book with ID 40.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at BookStoreApp.Api.Services.BookService.GetBookByIdAsync(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\BookService.cs:line 44
+   at BookStoreApp.Api.Controllers.BooksController.GetBookById(Int32 id) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\BooksController.cs:line 72
+2024-08-12 10:59:09.650 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 10:59:09.790 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 10:59:09.799 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 10:59:09.800 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 10:59:10.006 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 10:59:49.900 +05:30 [INF] Fetching book with ID 40.
+2024-08-12 11:30:59.646 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:30:59.749 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:30:59.754 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:30:59.758 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:30:59.777 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:31:44.966 +05:30 [INF] Fetching book with ID 40.
+2024-08-12 11:31:47.803 +05:30 [WRN] Book with ID 40 not found.
+2024-08-12 11:34:40.944 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:34:40.945 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:34:40.947 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:34:40.950 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:34:40.952 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:34:40.976 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:34:40.949 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:34:40.991 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:34:41.001 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:34:41.005 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:36:58.756 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:36:58.773 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:36:59.776 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:36:59.777 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:36:59.778 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:36:59.783 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:36:59.785 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:36:59.786 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:36:59.948 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:36:59.950 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:38:53.712 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:38:54.310 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:38:54.330 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:38:54.367 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:38:54.378 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:39:02.382 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:39:02.603 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:39:04.373 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:39:04.371 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:39:04.378 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:39:04.382 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:39:04.385 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:39:04.375 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:39:04.407 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:39:04.410 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:42:04.742 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:42:04.747 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:42:04.757 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:42:04.760 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:42:04.765 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:42:06.307 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:42:06.315 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:42:06.319 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:42:06.323 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:42:06.326 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:42:22.662 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:42:22.663 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:42:25.360 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:42:25.369 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:42:25.371 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:42:25.374 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:42:25.363 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:42:25.385 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:42:25.390 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:42:25.396 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:43:18.466 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:43:18.480 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:43:18.483 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:43:18.488 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:43:18.492 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:44:24.804 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:44:25.062 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:44:25.370 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:44:25.372 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:44:25.368 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:44:25.379 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:44:25.381 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:44:25.386 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:44:25.376 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:44:25.395 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:44:32.960 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:44:32.963 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:44:34.385 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:44:34.390 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:44:34.395 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:44:34.398 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:44:34.384 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:44:34.405 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:44:34.407 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:44:34.412 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:44:40.565 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:44:40.793 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:44:40.849 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:44:42.016 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:44:49.813 +05:30 [INF] Fetching all books.
+2024-08-12 11:44:49.829 +05:30 [INF] Fetching all languages.
+2024-08-12 11:44:49.892 +05:30 [INF] Fetching all genres.
+2024-08-12 11:44:50.186 +05:30 [INF] Successfully fetched all books.
+2024-08-12 11:44:52.586 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 11:44:52.878 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 11:44:53.684 +05:30 [INF] Fetching all languages.
+2024-08-12 11:44:53.685 +05:30 [INF] Fetching all genres.
+2024-08-12 11:44:53.971 +05:30 [INF] Fetching all books.
+2024-08-12 11:44:54.731 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 11:44:54.749 +05:30 [INF] Successfully fetched all books.
+2024-08-12 11:44:54.759 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 11:45:03.895 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:45:03.896 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:45:05.144 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:45:05.147 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:45:05.159 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:45:05.165 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:45:05.141 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:45:05.182 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:45:05.185 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:45:05.189 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:45:05.182 +05:30 [INF] Fetching all books.
+2024-08-12 11:45:05.193 +05:30 [INF] Fetching all genres.
+2024-08-12 11:45:05.210 +05:30 [INF] Fetching all languages.
+2024-08-12 11:45:05.659 +05:30 [INF] Successfully fetched all books.
+2024-08-12 11:45:05.970 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 11:45:06.270 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 11:45:06.928 +05:30 [INF] Fetching all genres.
+2024-08-12 11:45:06.929 +05:30 [INF] Fetching all languages.
+2024-08-12 11:45:06.929 +05:30 [INF] Fetching all books.
+2024-08-12 11:45:07.646 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 11:45:07.646 +05:30 [INF] Successfully fetched all books.
+2024-08-12 11:45:07.695 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 11:45:26.286 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:45:26.397 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:45:26.451 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:45:26.511 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:46:53.419 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:46:53.643 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:46:53.935 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:46:53.925 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:46:53.940 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:46:53.944 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:46:53.948 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:46:53.938 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:46:53.954 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:46:53.643 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:46:53.958 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:46:54.189 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:46:54.399 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:46:54.417 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:48:50.622 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:48:50.659 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:48:50.889 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:48:50.893 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:48:50.896 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:48:50.898 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:48:50.888 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:48:50.904 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:48:50.909 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:48:51.151 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:48:54.764 +05:30 [INF] Fetching all books.
+2024-08-12 11:48:54.798 +05:30 [INF] Fetching all genres.
+2024-08-12 11:48:54.818 +05:30 [INF] Fetching all languages.
+2024-08-12 11:48:55.601 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 11:48:55.632 +05:30 [INF] Successfully fetched all books.
+2024-08-12 11:48:56.448 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 11:48:56.478 +05:30 [INF] Fetching all genres.
+2024-08-12 11:48:56.537 +05:30 [INF] Fetching all books.
+2024-08-12 11:48:56.705 +05:30 [INF] Fetching all languages.
+2024-08-12 11:48:56.710 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 11:48:56.726 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 11:48:56.726 +05:30 [INF] Successfully fetched all books.
+2024-08-12 11:49:04.240 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:49:04.282 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:49:04.301 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:49:04.513 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:51:27.464 +05:30 [INF] Checking if genre name 'Mystery' exists.
+2024-08-12 11:51:27.507 +05:30 [INF] Genre name 'Mystery' exists: False.
+2024-08-12 11:51:27.552 +05:30 [INF] Creating a new genre.
+2024-08-12 11:51:27.844 +05:30 [INF] Successfully created genre with ID 17.
+2024-08-12 11:51:27.996 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:51:28.410 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:51:46.911 +05:30 [INF] Checking if genre name 'Thriller' exists.
+2024-08-12 11:51:46.926 +05:30 [INF] Genre name 'Thriller' exists: False.
+2024-08-12 11:51:46.989 +05:30 [INF] Creating a new genre.
+2024-08-12 11:51:47.013 +05:30 [INF] Successfully created genre with ID 18.
+2024-08-12 11:51:47.064 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:51:47.135 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:51:55.494 +05:30 [INF] Checking if genre name 'Thriller' exists.
+2024-08-12 11:51:55.521 +05:30 [INF] Genre name 'Thriller' exists: True.
+2024-08-12 11:52:14.628 +05:30 [INF] Checking if genre name 'Romance' exists.
+2024-08-12 11:52:14.828 +05:30 [INF] Genre name 'Romance' exists: False.
+2024-08-12 11:52:14.882 +05:30 [INF] Creating a new genre.
+2024-08-12 11:52:15.101 +05:30 [INF] Successfully created genre with ID 19.
+2024-08-12 11:52:15.585 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:52:15.679 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:52:26.783 +05:30 [INF] Checking if genre name 'Horror' exists.
+2024-08-12 11:52:26.873 +05:30 [INF] Genre name 'Horror' exists: False.
+2024-08-12 11:52:27.072 +05:30 [INF] Creating a new genre.
+2024-08-12 11:52:27.084 +05:30 [INF] Successfully created genre with ID 20.
+2024-08-12 11:52:27.348 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:52:27.613 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:52:53.518 +05:30 [INF] Checking if genre name 'Fiction' exists.
+2024-08-12 11:52:53.558 +05:30 [INF] Genre name 'Fiction' exists: False.
+2024-08-12 11:52:53.606 +05:30 [INF] Creating a new genre.
+2024-08-12 11:52:53.798 +05:30 [INF] Successfully created genre with ID 21.
+2024-08-12 11:52:53.885 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:52:54.079 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:55:08.652 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:55:08.951 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:55:08.644 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:55:12.871 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:55:17.225 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:55:17.226 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:55:17.227 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:55:17.229 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:55:17.230 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:55:17.245 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:55:17.246 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:55:18.939 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:55:20.339 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:55:20.440 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:55:31.459 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:55:31.459 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:55:31.479 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:55:31.496 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:55:31.498 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:55:33.349 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:55:33.351 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:55:33.353 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:55:33.354 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:55:33.356 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:55:33.358 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:55:33.398 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:55:33.419 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:55:33.674 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:56:29.327 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:56:29.328 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 11:56:29.879 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:56:29.881 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:56:29.885 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:56:29.877 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 11:56:29.890 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 11:56:29.893 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 11:56:29.897 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:56:29.888 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 11:56:29.905 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:56:29.989 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 11:56:30.011 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 11:56:30.020 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:05:46.244 +05:30 [INF] Fetching all genres.
+2024-08-12 12:05:46.353 +05:30 [INF] Fetching all books.
+2024-08-12 12:05:46.363 +05:30 [INF] Fetching all languages.
+2024-08-12 12:05:48.012 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:05:48.071 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:05:48.095 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:05:48.125 +05:30 [INF] Fetching all genres.
+2024-08-12 12:05:48.130 +05:30 [INF] Fetching all languages.
+2024-08-12 12:05:48.332 +05:30 [INF] Fetching all books.
+2024-08-12 12:05:48.611 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:05:48.611 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:05:52.074 +05:30 [INF] Fetching all languages.
+2024-08-12 12:05:52.075 +05:30 [INF] Fetching all genres.
+2024-08-12 12:05:52.095 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:05:52.367 +05:30 [INF] Fetching all books.
+2024-08-12 12:05:52.607 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:05:52.610 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:05:52.891 +05:30 [INF] Fetching all genres.
+2024-08-12 12:05:52.892 +05:30 [INF] Fetching all languages.
+2024-08-12 12:05:53.141 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:05:53.315 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:05:53.320 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:05:53.840 +05:30 [INF] Fetching all books.
+2024-08-12 12:05:54.210 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:06:49.365 +05:30 [INF] Fetching all books.
+2024-08-12 12:06:49.368 +05:30 [INF] Fetching all genres.
+2024-08-12 12:06:49.652 +05:30 [INF] Fetching all languages.
+2024-08-12 12:06:49.990 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:06:50.041 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:06:50.157 +05:30 [INF] Fetching all genres.
+2024-08-12 12:06:50.158 +05:30 [INF] Fetching all books.
+2024-08-12 12:06:50.164 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:06:50.191 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:06:50.192 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:06:50.204 +05:30 [INF] Fetching all languages.
+2024-08-12 12:06:51.541 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:07:53.680 +05:30 [INF] Fetching all books.
+2024-08-12 12:07:53.683 +05:30 [INF] Fetching all genres.
+2024-08-12 12:07:53.843 +05:30 [INF] Fetching all languages.
+2024-08-12 12:07:53.869 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:07:53.874 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:07:53.882 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:07:53.965 +05:30 [INF] Fetching all languages.
+2024-08-12 12:07:53.966 +05:30 [INF] Fetching all genres.
+2024-08-12 12:07:53.966 +05:30 [INF] Fetching all books.
+2024-08-12 12:07:53.989 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:07:53.989 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:07:53.989 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:10:42.787 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 12:10:42.836 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:10:42.852 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 12:10:42.918 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:11:57.967 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 12:11:57.578 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 12:11:58.238 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 12:11:58.318 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 12:11:58.322 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 12:12:01.362 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 12:12:01.447 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:12:02.580 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 12:12:02.582 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 12:12:02.882 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 12:12:02.897 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 12:12:02.942 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 12:12:02.959 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 12:12:03.244 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:12:53.849 +05:30 [INF] Checking if genre name 'Adventure' exists.
+2024-08-12 12:12:54.220 +05:30 [INF] Genre name 'Adventure' exists: False.
+2024-08-12 12:12:54.252 +05:30 [INF] Creating a new genre.
+2024-08-12 12:12:54.562 +05:30 [INF] Successfully created genre with ID 22.
+2024-08-12 12:12:54.831 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 12:12:54.880 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:16:00.368 +05:30 [INF] Author R.K. Narayan created successfully with ID 31.
+2024-08-12 12:16:36.765 +05:30 [INF] Author Chetan Bhagat created successfully with ID 32.
+2024-08-12 12:18:28.576 +05:30 [INF] Author Jayakanthan created successfully with ID 33.
+2024-08-12 12:19:20.468 +05:30 [INF] Author Kuvempu created successfully with ID 34.
+2024-08-12 12:19:51.406 +05:30 [INF] Author Munshi Premchand created successfully with ID 35.
+2024-08-12 12:20:15.240 +05:30 [INF] Author Mahadevi Verma created successfully with ID 36.
+2024-08-12 12:21:34.251 +05:30 [INF] Author Kalki created successfully with ID 37.
+2024-08-12 12:21:58.898 +05:30 [INF] Author author created successfully with ID 38.
+2024-08-12 12:22:28.587 +05:30 [INF] Author test created successfully with ID 39.
+2024-08-12 12:23:01.335 +05:30 [INF] Author with ID 39 updated successfully.
+2024-08-12 12:23:08.965 +05:30 [INF] Author with ID 39 deleted successfully.
+2024-08-12 12:23:19.505 +05:30 [INF] Fetching all genres.
+2024-08-12 12:23:19.516 +05:30 [INF] Fetching all books.
+2024-08-12 12:23:19.549 +05:30 [INF] Fetching all languages.
+2024-08-12 12:23:20.413 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:23:20.436 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:23:20.437 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:23:20.460 +05:30 [INF] Fetching all languages.
+2024-08-12 12:23:20.476 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:23:20.541 +05:30 [INF] Fetching all books.
+2024-08-12 12:23:20.542 +05:30 [INF] Fetching all genres.
+2024-08-12 12:23:21.565 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:23:21.566 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:23:24.264 +05:30 [INF] Fetching all genres.
+2024-08-12 12:23:24.439 +05:30 [INF] Fetching all languages.
+2024-08-12 12:23:24.706 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:23:24.710 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:23:24.757 +05:30 [INF] Fetching all genres.
+2024-08-12 12:23:24.758 +05:30 [INF] Fetching all languages.
+2024-08-12 12:23:24.965 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:23:24.965 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:24:30.837 +05:30 [INF] Creating a new book.
+2024-08-12 12:24:30.992 +05:30 [INF] Successfully created book with ID 41.
+2024-08-12 12:24:33.767 +05:30 [INF] Fetching all books.
+2024-08-12 12:24:33.825 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:24:48.537 +05:30 [INF] Fetching all genres.
+2024-08-12 12:24:48.537 +05:30 [INF] Fetching all languages.
+2024-08-12 12:24:49.990 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:24:50.007 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:24:50.552 +05:30 [INF] Fetching all languages.
+2024-08-12 12:24:50.552 +05:30 [INF] Fetching all genres.
+2024-08-12 12:24:50.587 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:24:50.593 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:25:59.854 +05:30 [INF] Creating a new book.
+2024-08-12 12:25:59.881 +05:30 [INF] Successfully created book with ID 42.
+2024-08-12 12:26:01.878 +05:30 [INF] Fetching all books.
+2024-08-12 12:26:01.906 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:26:25.268 +05:30 [INF] Fetching all languages.
+2024-08-12 12:26:25.289 +05:30 [INF] Fetching all genres.
+2024-08-12 12:26:26.473 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:26:26.681 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:26:26.741 +05:30 [INF] Fetching all languages.
+2024-08-12 12:26:26.930 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:26:26.947 +05:30 [INF] Fetching all genres.
+2024-08-12 12:26:26.964 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:27:07.223 +05:30 [INF] Creating a new book.
+2024-08-12 12:27:07.249 +05:30 [INF] Successfully created book with ID 43.
+2024-08-12 12:27:09.110 +05:30 [INF] Fetching all books.
+2024-08-12 12:27:09.506 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:27:35.862 +05:30 [INF] Fetching all languages.
+2024-08-12 12:27:35.872 +05:30 [INF] Fetching all genres.
+2024-08-12 12:27:36.416 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:27:36.431 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:27:36.699 +05:30 [INF] Fetching all languages.
+2024-08-12 12:27:36.714 +05:30 [INF] Fetching all genres.
+2024-08-12 12:27:36.893 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:27:36.894 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:28:26.122 +05:30 [INF] Creating a new book.
+2024-08-12 12:28:26.259 +05:30 [INF] Successfully created book with ID 44.
+2024-08-12 12:28:28.511 +05:30 [INF] Fetching all books.
+2024-08-12 12:28:28.546 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:28:30.760 +05:30 [INF] Fetching book with ID 44.
+2024-08-12 12:28:31.225 +05:30 [INF] Successfully fetched book with ID 44.
+2024-08-12 12:28:33.591 +05:30 [INF] Fetching all books.
+2024-08-12 12:28:33.709 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:28:51.600 +05:30 [INF] Fetching all genres.
+2024-08-12 12:28:51.601 +05:30 [INF] Fetching all languages.
+2024-08-12 12:28:51.655 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:28:51.658 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:28:51.754 +05:30 [INF] Fetching all genres.
+2024-08-12 12:28:51.754 +05:30 [INF] Fetching all languages.
+2024-08-12 12:28:51.812 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:28:51.813 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:29:42.006 +05:30 [INF] Creating a new book.
+2024-08-12 12:29:42.074 +05:30 [INF] Successfully created book with ID 45.
+2024-08-12 12:29:44.004 +05:30 [INF] Fetching all books.
+2024-08-12 12:29:44.038 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:30:13.354 +05:30 [INF] Fetching all books.
+2024-08-12 12:30:13.520 +05:30 [INF] Fetching all languages.
+2024-08-12 12:30:13.547 +05:30 [INF] Fetching all genres.
+2024-08-12 12:30:13.730 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:30:13.941 +05:30 [INF] Fetching all languages.
+2024-08-12 12:30:14.213 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:30:14.423 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:30:14.483 +05:30 [INF] Fetching all genres.
+2024-08-12 12:30:14.483 +05:30 [INF] Fetching all books.
+2024-08-12 12:30:14.996 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:30:15.001 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:30:15.030 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:30:16.348 +05:30 [INF] Fetching all genres.
+2024-08-12 12:30:16.449 +05:30 [INF] Fetching all languages.
+2024-08-12 12:30:16.470 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:30:16.471 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:30:16.564 +05:30 [INF] Fetching all genres.
+2024-08-12 12:30:16.593 +05:30 [INF] Fetching all languages.
+2024-08-12 12:30:16.600 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:30:16.600 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:30:58.834 +05:30 [INF] Creating a new book.
+2024-08-12 12:30:59.240 +05:30 [INF] Successfully created book with ID 46.
+2024-08-12 12:31:00.959 +05:30 [INF] Fetching all books.
+2024-08-12 12:31:01.037 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:31:07.369 +05:30 [INF] Fetching book with ID 46.
+2024-08-12 12:31:07.394 +05:30 [INF] Successfully fetched book with ID 46.
+2024-08-12 12:31:13.434 +05:30 [INF] Fetching all books.
+2024-08-12 12:31:13.449 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:31:14.878 +05:30 [INF] Fetching book with ID 45.
+2024-08-12 12:31:14.904 +05:30 [INF] Successfully fetched book with ID 45.
+2024-08-12 12:31:17.642 +05:30 [INF] Fetching all books.
+2024-08-12 12:31:17.654 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:31:19.614 +05:30 [INF] Fetching book with ID 44.
+2024-08-12 12:31:19.636 +05:30 [INF] Successfully fetched book with ID 44.
+2024-08-12 12:31:22.830 +05:30 [INF] Fetching all books.
+2024-08-12 12:31:23.379 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:32:27.590 +05:30 [INF] Fetching all books.
+2024-08-12 12:32:27.593 +05:30 [INF] Fetching all languages.
+2024-08-12 12:32:28.232 +05:30 [INF] Fetching all genres.
+2024-08-12 12:32:28.264 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:32:28.264 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:32:28.498 +05:30 [INF] Fetching all genres.
+2024-08-12 12:32:28.499 +05:30 [INF] Fetching all languages.
+2024-08-12 12:32:28.724 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:32:28.728 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:32:28.730 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:32:29.018 +05:30 [INF] Fetching all books.
+2024-08-12 12:32:29.298 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:37:40.862 +05:30 [INF] Fetching book with ID 43.
+2024-08-12 12:37:40.866 +05:30 [INF] Fetching all genres.
+2024-08-12 12:37:41.217 +05:30 [INF] Fetching all languages.
+2024-08-12 12:37:41.276 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:37:41.281 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:37:41.550 +05:30 [INF] Successfully fetched book with ID 43.
+2024-08-12 12:37:41.849 +05:30 [INF] Fetching all languages.
+2024-08-12 12:37:41.849 +05:30 [INF] Fetching all genres.
+2024-08-12 12:37:42.119 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:37:42.120 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:38:18.840 +05:30 [INF] Updating book with ID 43.
+2024-08-12 12:38:18.874 +05:30 [INF] Successfully updated book with ID 43.
+2024-08-12 12:38:21.073 +05:30 [INF] Fetching all books.
+2024-08-12 12:38:21.089 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:38:25.980 +05:30 [INF] Fetching book with ID 43.
+2024-08-12 12:38:26.002 +05:30 [INF] Successfully fetched book with ID 43.
+2024-08-12 12:38:28.712 +05:30 [INF] Fetching all books.
+2024-08-12 12:38:28.731 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:38:30.892 +05:30 [INF] Fetching book with ID 43.
+2024-08-12 12:38:30.897 +05:30 [INF] Fetching all genres.
+2024-08-12 12:38:30.897 +05:30 [INF] Fetching all languages.
+2024-08-12 12:38:31.704 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:38:31.710 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:38:31.716 +05:30 [INF] Successfully fetched book with ID 43.
+2024-08-12 12:38:32.081 +05:30 [INF] Fetching all genres.
+2024-08-12 12:38:32.081 +05:30 [INF] Fetching all languages.
+2024-08-12 12:38:32.541 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:38:32.551 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:38:35.938 +05:30 [INF] Updating book with ID 43.
+2024-08-12 12:38:35.969 +05:30 [INF] Successfully updated book with ID 43.
+2024-08-12 12:38:38.138 +05:30 [INF] Fetching all books.
+2024-08-12 12:38:38.205 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:38:42.838 +05:30 [INF] Fetching book with ID 43.
+2024-08-12 12:38:42.858 +05:30 [INF] Successfully fetched book with ID 43.
+2024-08-12 12:38:45.992 +05:30 [INF] Fetching all books.
+2024-08-12 12:38:46.010 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:38:53.692 +05:30 [INF] Fetching book with ID 44.
+2024-08-12 12:38:53.693 +05:30 [INF] Fetching all genres.
+2024-08-12 12:38:53.694 +05:30 [INF] Fetching all languages.
+2024-08-12 12:38:54.072 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:38:54.072 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:38:54.261 +05:30 [INF] Successfully fetched book with ID 44.
+2024-08-12 12:38:55.085 +05:30 [INF] Fetching all genres.
+2024-08-12 12:38:55.086 +05:30 [INF] Fetching all languages.
+2024-08-12 12:38:55.344 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:38:55.346 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:39:44.140 +05:30 [INF] Updating book with ID 44.
+2024-08-12 12:39:44.184 +05:30 [INF] Successfully updated book with ID 44.
+2024-08-12 12:39:46.031 +05:30 [INF] Fetching all books.
+2024-08-12 12:39:46.042 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:39:50.069 +05:30 [INF] Fetching book with ID 44.
+2024-08-12 12:39:50.089 +05:30 [INF] Successfully fetched book with ID 44.
+2024-08-12 12:39:52.622 +05:30 [INF] Fetching all books.
+2024-08-12 12:39:52.657 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:40:09.393 +05:30 [INF] Fetching book with ID 45.
+2024-08-12 12:40:09.468 +05:30 [INF] Fetching all genres.
+2024-08-12 12:40:09.472 +05:30 [INF] Fetching all languages.
+2024-08-12 12:40:10.230 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:40:10.232 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:40:10.237 +05:30 [INF] Successfully fetched book with ID 45.
+2024-08-12 12:40:11.117 +05:30 [INF] Fetching all languages.
+2024-08-12 12:40:11.118 +05:30 [INF] Fetching all genres.
+2024-08-12 12:40:11.583 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:40:11.583 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:40:20.337 +05:30 [INF] Updating book with ID 45.
+2024-08-12 12:40:20.393 +05:30 [INF] Successfully updated book with ID 45.
+2024-08-12 12:40:22.867 +05:30 [INF] Fetching all books.
+2024-08-12 12:40:22.888 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:40:27.210 +05:30 [INF] Fetching book with ID 46.
+2024-08-12 12:40:27.211 +05:30 [INF] Fetching all genres.
+2024-08-12 12:40:27.288 +05:30 [INF] Fetching all languages.
+2024-08-12 12:40:27.418 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:40:27.432 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:40:27.435 +05:30 [INF] Successfully fetched book with ID 46.
+2024-08-12 12:40:27.729 +05:30 [INF] Fetching all genres.
+2024-08-12 12:40:27.729 +05:30 [INF] Fetching all languages.
+2024-08-12 12:40:28.415 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:40:28.416 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:40:36.291 +05:30 [INF] Updating book with ID 46.
+2024-08-12 12:40:36.385 +05:30 [INF] Successfully updated book with ID 46.
+2024-08-12 12:40:38.695 +05:30 [INF] Fetching all books.
+2024-08-12 12:40:38.704 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:40:42.454 +05:30 [INF] Fetching book with ID 42.
+2024-08-12 12:40:42.456 +05:30 [INF] Fetching all genres.
+2024-08-12 12:40:42.456 +05:30 [INF] Fetching all languages.
+2024-08-12 12:40:42.938 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:40:42.967 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:40:42.975 +05:30 [INF] Successfully fetched book with ID 42.
+2024-08-12 12:40:43.329 +05:30 [INF] Fetching all languages.
+2024-08-12 12:40:43.330 +05:30 [INF] Fetching all genres.
+2024-08-12 12:40:43.756 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:40:43.757 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:40:52.177 +05:30 [INF] Updating book with ID 42.
+2024-08-12 12:40:52.206 +05:30 [INF] Successfully updated book with ID 42.
+2024-08-12 12:40:54.440 +05:30 [INF] Fetching all books.
+2024-08-12 12:40:54.588 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:41:06.387 +05:30 [INF] Fetching book with ID 46.
+2024-08-12 12:41:06.431 +05:30 [INF] Successfully fetched book with ID 46.
+2024-08-12 12:41:08.944 +05:30 [INF] Fetching all books.
+2024-08-12 12:41:08.952 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:41:17.984 +05:30 [INF] Fetching book with ID 43.
+2024-08-12 12:41:17.985 +05:30 [INF] Fetching all genres.
+2024-08-12 12:41:17.987 +05:30 [INF] Fetching all languages.
+2024-08-12 12:41:18.264 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:41:18.264 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:41:18.270 +05:30 [INF] Successfully fetched book with ID 43.
+2024-08-12 12:41:18.816 +05:30 [INF] Fetching all genres.
+2024-08-12 12:41:19.119 +05:30 [INF] Fetching all languages.
+2024-08-12 12:41:19.371 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:41:19.495 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:41:38.257 +05:30 [INF] Updating book with ID 43.
+2024-08-12 12:41:38.494 +05:30 [INF] Successfully updated book with ID 43.
+2024-08-12 12:41:40.238 +05:30 [INF] Fetching all books.
+2024-08-12 12:41:40.296 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:41:42.434 +05:30 [INF] Fetching book with ID 43.
+2024-08-12 12:41:42.438 +05:30 [INF] Fetching all genres.
+2024-08-12 12:41:42.483 +05:30 [INF] Fetching all languages.
+2024-08-12 12:41:42.548 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:41:42.548 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:41:42.722 +05:30 [INF] Successfully fetched book with ID 43.
+2024-08-12 12:41:42.761 +05:30 [INF] Fetching all genres.
+2024-08-12 12:41:42.770 +05:30 [INF] Fetching all languages.
+2024-08-12 12:41:42.972 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:41:42.976 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:41:50.513 +05:30 [INF] Updating book with ID 43.
+2024-08-12 12:41:51.037 +05:30 [INF] Successfully updated book with ID 43.
+2024-08-12 12:41:53.031 +05:30 [INF] Fetching all books.
+2024-08-12 12:41:54.036 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:50:25.314 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 12:50:25.344 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:50:25.380 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 12:50:25.388 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:50:29.995 +05:30 [INF] Fetching all books.
+2024-08-12 12:50:30.004 +05:30 [INF] Fetching all genres.
+2024-08-12 12:50:30.004 +05:30 [INF] Fetching all languages.
+2024-08-12 12:50:30.073 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:50:30.444 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:50:30.455 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:50:30.487 +05:30 [INF] Fetching all genres.
+2024-08-12 12:50:30.488 +05:30 [INF] Fetching all languages.
+2024-08-12 12:50:30.726 +05:30 [INF] Fetching all books.
+2024-08-12 12:50:30.945 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:50:30.950 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:50:30.954 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:51:07.709 +05:30 [INF] Fetching all books.
+2024-08-12 12:51:07.709 +05:30 [INF] Fetching all languages.
+2024-08-12 12:51:08.066 +05:30 [INF] Fetching all genres.
+2024-08-12 12:51:08.086 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:51:08.139 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:51:08.163 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:51:08.188 +05:30 [INF] Fetching all languages.
+2024-08-12 12:51:08.188 +05:30 [INF] Fetching all genres.
+2024-08-12 12:51:08.415 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 12:51:08.415 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 12:51:08.424 +05:30 [INF] Fetching all books.
+2024-08-12 12:51:08.785 +05:30 [INF] Successfully fetched all books.
+2024-08-12 12:51:10.072 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 12:51:10.095 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:51:10.163 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 12:51:10.179 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 12:51:52.747 +05:30 [INF] Starting authentication for user: test
+2024-08-12 12:51:52.759 +05:30 [INF] Validating credentials for user: test
+2024-08-12 12:51:52.764 +05:30 [WRN] Failed to validate credentials for user: test
+2024-08-12 12:51:52.767 +05:30 [WRN] Authentication failed for user: test. Invalid credentials provided.
+2024-08-12 12:51:52.784 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-12 12:51:52.987 +05:30 [WRN] The response has already started, the error page middleware will not be executed.
+2024-08-12 12:51:52.998 +05:30 [ERR] Connection id "0HN5QJ79Q4066", Request id "0HN5QJ79Q4066:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2024-08-12 12:52:07.518 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 12:52:07.530 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 12:52:07.532 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 12:52:07.537 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 12:52:07.550 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 12:52:43.902 +05:30 [INF] Fetching book with ID 40.
+2024-08-12 12:52:44.148 +05:30 [WRN] Book with ID 40 not found.
+2024-08-12 14:50:00.004 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 14:50:00.076 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 14:50:00.145 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 14:50:00.145 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 14:50:00.149 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 14:50:00.148 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 14:50:00.152 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 14:50:00.153 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 14:50:00.172 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 14:50:00.347 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 14:52:22.859 +05:30 [INF] Fetching all genres.
+2024-08-12 14:52:22.878 +05:30 [INF] Fetching all books.
+2024-08-12 14:52:27.369 +05:30 [INF] Fetching all languages.
+2024-08-12 14:52:28.880 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 14:52:29.086 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 14:52:29.098 +05:30 [INF] Successfully fetched all books.
+2024-08-12 14:52:29.196 +05:30 [INF] Fetching all genres.
+2024-08-12 14:52:29.198 +05:30 [INF] Fetching all languages.
+2024-08-12 14:52:29.406 +05:30 [INF] Fetching all books.
+2024-08-12 14:52:29.422 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 14:52:29.468 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 14:52:30.910 +05:30 [INF] Successfully fetched all books.
+2024-08-12 14:52:37.063 +05:30 [INF] Fetching all genres.
+2024-08-12 14:52:37.068 +05:30 [INF] Fetching all languages.
+2024-08-12 14:52:38.238 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 14:52:38.245 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 14:52:38.274 +05:30 [INF] Fetching all genres.
+2024-08-12 14:52:38.328 +05:30 [INF] Fetching all languages.
+2024-08-12 14:52:38.337 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 14:52:38.341 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 14:54:39.886 +05:30 [INF] Creating a new book.
+2024-08-12 14:54:40.573 +05:30 [INF] Successfully created book with ID 47.
+2024-08-12 14:54:42.701 +05:30 [INF] Fetching all books.
+2024-08-12 14:54:42.716 +05:30 [INF] Successfully fetched all books.
+2024-08-12 15:09:10.711 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 15:09:10.834 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 15:09:10.837 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 15:09:10.841 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 15:09:10.844 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 15:09:35.158 +05:30 [INF] Creating a new genre.
+2024-08-12 15:09:35.304 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'BookStoreApp.Api.DbContexts.BookStoreDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Genres' with unique index 'IX_Genres_genre_name'. The duplicate key value is (Fantasy).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:288bd12c-a447-45ea-ab78-ef2239e50a05
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Genres' with unique index 'IX_Genres_genre_name'. The duplicate key value is (Fantasy).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:288bd12c-a447-45ea-ab78-ef2239e50a05
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-08-12 15:09:35.431 +05:30 [ERR] An error occurred while creating a new genre.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Genres' with unique index 'IX_Genres_genre_name'. The duplicate key value is (Fantasy).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:288bd12c-a447-45ea-ab78-ef2239e50a05
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at BookStoreApp.Api.Repositories.GenreRepository.SaveChangesAsync() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Repositories\GenreRepository.cs:line 85
+   at BookStoreApp.Api.Repositories.GenreRepository.AddGenreAsync(Genre genre) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Repositories\GenreRepository.cs:line 30
+   at BookStoreApp.Api.Services.GenreService.AddGenreAsync(Genre genre) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Services\GenreService.cs:line 18
+   at BookStoreApp.Api.Controllers.GenresController.CreateGenre(Genre genre) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\GenresController.cs:line 158
+2024-08-12 15:46:05.867 +05:30 [INF] Creating a new genre.
+2024-08-12 15:46:09.708 +05:30 [WRN] Genre creation failed. Genre name already exists: Fantasy.
+2024-08-12 15:46:30.999 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 15:46:31.502 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 15:46:31.600 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 15:46:32.191 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 15:46:45.321 +05:30 [INF] Checking if genre name 'Fantasy' exists.
+2024-08-12 15:46:45.363 +05:30 [INF] Genre name 'Fantasy' exists: True.
+2024-08-12 15:46:53.384 +05:30 [INF] Checking if genre name 'test' exists.
+2024-08-12 15:46:53.394 +05:30 [INF] Genre name 'test' exists: False.
+2024-08-12 15:46:53.450 +05:30 [INF] Creating a new genre.
+2024-08-12 15:46:53.725 +05:30 [INF] Successfully created genre with ID 24.
+2024-08-12 15:46:53.933 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 15:46:54.913 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 15:48:05.174 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 15:48:06.211 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 15:48:06.500 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 15:48:07.035 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 15:51:33.460 +05:30 [INF] Fetching all genres.
+2024-08-12 15:51:35.454 +05:30 [INF] Fetching all books.
+2024-08-12 15:51:39.641 +05:30 [INF] Fetching all languages.
+2024-08-12 15:51:53.565 +05:30 [INF] Fetching all books.
+2024-08-12 15:51:53.567 +05:30 [INF] Fetching all genres.
+2024-08-12 15:51:53.610 +05:30 [INF] Fetching all languages.
+2024-08-12 15:51:57.649 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 15:51:58.216 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 15:51:59.083 +05:30 [INF] Successfully fetched all books.
+2024-08-12 15:51:59.085 +05:30 [INF] Successfully fetched all books.
+2024-08-12 15:51:59.108 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 15:51:59.306 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 16:37:03.084 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 16:37:03.091 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 16:37:03.155 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 16:37:03.157 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 16:37:03.159 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 16:37:03.162 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 16:37:03.164 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 16:37:03.166 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 16:37:03.429 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 16:37:03.429 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 16:39:11.295 +05:30 [INF] Fetching all books.
+2024-08-12 16:39:11.467 +05:30 [INF] Fetching all genres.
+2024-08-12 16:39:14.710 +05:30 [INF] Fetching all languages.
+2024-08-12 16:39:17.859 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 16:39:18.297 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 16:39:18.889 +05:30 [INF] Successfully fetched all books.
+2024-08-12 16:39:18.911 +05:30 [INF] Fetching all languages.
+2024-08-12 16:39:19.104 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 16:39:19.146 +05:30 [INF] Fetching all genres.
+2024-08-12 16:39:19.148 +05:30 [INF] Fetching all books.
+2024-08-12 16:39:21.561 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 16:39:21.791 +05:30 [INF] Successfully fetched all books.
+2024-08-12 16:39:25.395 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 16:39:25.947 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 16:39:25.990 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 16:39:26.004 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 16:49:33.274 +05:30 [INF] Fetching all books.
+2024-08-12 16:49:33.287 +05:30 [INF] Fetching all languages.
+2024-08-12 16:49:33.480 +05:30 [INF] Fetching all genres.
+2024-08-12 16:49:33.536 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 16:49:33.537 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 16:49:33.584 +05:30 [INF] Fetching all genres.
+2024-08-12 16:49:33.585 +05:30 [INF] Fetching all languages.
+2024-08-12 16:49:35.874 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 16:49:35.877 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 16:49:35.886 +05:30 [INF] Successfully fetched all books.
+2024-08-12 16:49:36.059 +05:30 [INF] Fetching all books.
+2024-08-12 16:49:38.958 +05:30 [INF] Successfully fetched all books.
+2024-08-12 16:49:39.246 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 16:49:39.568 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 16:49:40.139 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 16:49:40.195 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 17:01:32.847 +05:30 [INF] Fetching all books.
+2024-08-12 17:01:32.862 +05:30 [INF] Fetching all genres.
+2024-08-12 17:01:33.139 +05:30 [INF] Fetching all languages.
+2024-08-12 17:01:34.453 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:01:34.729 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:01:35.098 +05:30 [INF] Fetching all languages.
+2024-08-12 17:01:35.099 +05:30 [INF] Fetching all genres.
+2024-08-12 17:01:35.399 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:01:35.945 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:01:36.063 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:01:36.524 +05:30 [INF] Fetching all books.
+2024-08-12 17:01:36.768 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:03:29.420 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 17:03:29.452 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 17:03:29.455 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 17:03:29.458 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 17:03:29.463 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 17:04:00.812 +05:30 [INF] Fetching all books.
+2024-08-12 17:04:00.815 +05:30 [INF] Fetching all genres.
+2024-08-12 17:04:01.447 +05:30 [INF] Fetching all languages.
+2024-08-12 17:04:01.674 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:04:01.970 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:04:02.020 +05:30 [INF] Fetching all genres.
+2024-08-12 17:04:02.017 +05:30 [INF] Fetching all languages.
+2024-08-12 17:04:02.246 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:04:02.250 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:04:02.493 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:04:02.749 +05:30 [INF] Fetching all books.
+2024-08-12 17:04:03.344 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:04:08.118 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 17:04:08.363 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 17:04:10.082 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 17:04:10.105 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 17:09:20.752 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 17:09:20.803 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 17:09:20.812 +05:30 [WRN] Failed to validate credentials for user: karpagam
+2024-08-12 17:09:20.815 +05:30 [WRN] Authentication failed for user: karpagam. Invalid credentials provided.
+2024-08-12 17:09:20.832 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-08-12 17:09:21.038 +05:30 [WRN] The response has already started, the error page middleware will not be executed.
+2024-08-12 17:09:21.049 +05:30 [ERR] Connection id "0HN5QNN6KKC0A", Request id "0HN5QNN6KKC0A:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Headers are read-only, response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpHeaders.ThrowHeadersReadOnlyException()
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders.Microsoft.AspNetCore.Http.IHeaderDictionary.set_ContentType(StringValues value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_ContentType(String value)
+   at BookStoreApp.Api.Middleware.CustomUnauthorizedMiddleware.Invoke(HttpContext context) in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Middleware\CustomUnauthorizedMiddleware.cs:line 21
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2024-08-12 17:10:02.990 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 17:10:03.051 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 17:10:03.054 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 17:10:03.056 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 17:10:03.062 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 17:10:19.288 +05:30 [INF] Fetching all genres.
+2024-08-12 17:10:19.373 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:13:27.954 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 17:13:29.056 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 17:14:41.126 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 17:14:41.340 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 17:14:41.362 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 17:14:41.366 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 17:14:41.369 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 17:16:27.249 +05:30 [INF] Fetching all books.
+2024-08-12 17:16:27.330 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:28:38.266 +05:30 [INF] Fetching all books.
+2024-08-12 17:28:38.280 +05:30 [INF] Fetching all genres.
+2024-08-12 17:28:38.296 +05:30 [INF] Fetching all languages.
+2024-08-12 17:28:39.651 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:28:39.654 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:28:39.933 +05:30 [INF] Fetching all genres.
+2024-08-12 17:28:40.149 +05:30 [INF] Fetching all languages.
+2024-08-12 17:28:40.165 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:28:40.410 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:28:40.422 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:28:40.435 +05:30 [INF] Fetching all books.
+2024-08-12 17:28:41.255 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:42:05.094 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 17:42:05.154 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 17:42:05.182 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 17:42:05.393 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 17:42:09.470 +05:30 [INF] Fetching all books.
+2024-08-12 17:42:09.472 +05:30 [INF] Fetching all languages.
+2024-08-12 17:42:09.472 +05:30 [INF] Fetching all genres.
+2024-08-12 17:42:11.283 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:42:11.300 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:42:11.328 +05:30 [INF] Fetching all languages.
+2024-08-12 17:42:11.345 +05:30 [INF] Fetching all genres.
+2024-08-12 17:42:11.360 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:42:11.361 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:42:11.363 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:42:11.474 +05:30 [INF] Fetching all books.
+2024-08-12 17:42:11.766 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:42:15.351 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 17:42:15.352 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-12 17:42:15.480 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 17:42:15.482 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 17:42:15.487 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 17:42:15.492 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 17:42:15.364 +05:30 [INF] Fetching all books.
+2024-08-12 17:42:15.378 +05:30 [INF] Fetching all genres.
+2024-08-12 17:42:15.390 +05:30 [INF] Fetching all languages.
+2024-08-12 17:42:15.478 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-12 17:42:15.536 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-12 17:42:15.539 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-12 17:42:15.541 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-12 17:42:15.593 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:42:15.785 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:42:15.789 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:42:15.860 +05:30 [INF] Fetching all genres.
+2024-08-12 17:42:16.026 +05:30 [INF] Fetching all languages.
+2024-08-12 17:42:16.055 +05:30 [INF] Fetching all books.
+2024-08-12 17:42:16.361 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 17:42:16.364 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 17:42:16.369 +05:30 [INF] Successfully fetched all books.
+2024-08-12 17:50:41.269 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 17:50:41.344 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 17:50:41.376 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 17:50:41.393 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 18:00:32.813 +05:30 [INF] Fetching all books.
+2024-08-12 18:00:32.814 +05:30 [INF] Fetching all languages.
+2024-08-12 18:00:32.835 +05:30 [INF] Fetching all genres.
+2024-08-12 18:00:34.547 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:00:34.551 +05:30 [INF] Successfully fetched all books.
+2024-08-12 18:00:34.582 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:00:34.784 +05:30 [INF] Fetching all genres.
+2024-08-12 18:00:34.787 +05:30 [INF] Fetching all books.
+2024-08-12 18:00:34.807 +05:30 [INF] Fetching all languages.
+2024-08-12 18:00:34.814 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:00:34.833 +05:30 [INF] Successfully fetched all books.
+2024-08-12 18:00:34.968 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:00:36.605 +05:30 [INF] Fetching all books.
+2024-08-12 18:00:36.606 +05:30 [INF] Fetching all genres.
+2024-08-12 18:00:36.607 +05:30 [INF] Fetching all languages.
+2024-08-12 18:00:36.652 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:00:36.657 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:00:36.661 +05:30 [INF] Successfully fetched all books.
+2024-08-12 18:00:36.712 +05:30 [INF] Fetching all genres.
+2024-08-12 18:00:36.913 +05:30 [INF] Fetching all languages.
+2024-08-12 18:00:36.917 +05:30 [INF] Fetching all books.
+2024-08-12 18:00:37.460 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:00:37.461 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:00:37.464 +05:30 [INF] Successfully fetched all books.
+2024-08-12 18:00:42.310 +05:30 [INF] Fetching all books.
+2024-08-12 18:00:42.311 +05:30 [INF] Fetching all genres.
+2024-08-12 18:00:42.312 +05:30 [INF] Fetching all languages.
+2024-08-12 18:00:42.899 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:00:42.900 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:00:42.905 +05:30 [INF] Successfully fetched all books.
+2024-08-12 18:00:43.154 +05:30 [INF] Fetching all languages.
+2024-08-12 18:00:43.154 +05:30 [INF] Fetching all genres.
+2024-08-12 18:00:43.188 +05:30 [INF] Fetching all books.
+2024-08-12 18:00:43.437 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:00:43.441 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:00:43.614 +05:30 [INF] Successfully fetched all books.
+2024-08-12 18:00:46.130 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 18:00:46.190 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 18:00:46.213 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 18:00:46.405 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 18:00:47.234 +05:30 [INF] Fetching all books.
+2024-08-12 18:00:47.237 +05:30 [INF] Fetching all languages.
+2024-08-12 18:00:47.238 +05:30 [INF] Fetching all genres.
+2024-08-12 18:00:47.314 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:00:47.333 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:00:47.341 +05:30 [INF] Successfully fetched all books.
+2024-08-12 18:00:47.391 +05:30 [INF] Fetching all languages.
+2024-08-12 18:00:47.391 +05:30 [INF] Fetching all genres.
+2024-08-12 18:00:47.590 +05:30 [INF] Fetching all books.
+2024-08-12 18:00:47.867 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:00:47.867 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:00:47.877 +05:30 [INF] Successfully fetched all books.
+2024-08-12 18:26:07.366 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 18:26:07.380 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 18:26:07.401 +05:30 [INF] Fetching all genres with book count.
+2024-08-12 18:26:07.610 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-12 18:26:12.362 +05:30 [INF] Fetching all books.
+2024-08-12 18:26:12.365 +05:30 [INF] Fetching all genres.
+2024-08-12 18:26:12.656 +05:30 [INF] Fetching all languages.
+2024-08-12 18:26:13.605 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:26:13.684 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:26:13.931 +05:30 [INF] Fetching all languages.
+2024-08-12 18:26:13.931 +05:30 [INF] Fetching all genres.
+2024-08-12 18:26:14.130 +05:30 [INF] Successfully fetched all books.
+2024-08-12 18:26:14.139 +05:30 [INF] Successfully fetched all languages.
+2024-08-12 18:26:14.362 +05:30 [INF] Successfully fetched all genres.
+2024-08-12 18:26:14.420 +05:30 [INF] Fetching all books.
+2024-08-12 18:26:14.923 +05:30 [INF] Successfully fetched all books.

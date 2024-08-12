@@ -25,11 +25,11 @@ function App() {
     console.log("app.js is loading");
     // Fetch the token when the component mounts
     createNewToken(credentials)
-      .then(response => {
+      .then(data => {
       
-        setToken(response.Token); // Save the token in state
-        setAPIToken(response.Token); // Set the token in config.js
-        console.log("token",response.Token);
+        setToken(data.token); // Save the token in state
+        setAPIToken(data.token); // Set the token in config.js
+        console.log("token",data.token);
       })
       .catch(error => {
         console.error("Error fetching token:", error);
