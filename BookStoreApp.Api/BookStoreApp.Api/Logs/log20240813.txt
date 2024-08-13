@@ -1,0 +1,205 @@
+2024-08-13 09:42:58.110 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-13 09:42:58.110 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-13 09:42:58.173 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-13 09:42:58.178 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-13 09:42:58.179 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-13 09:42:58.180 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-13 09:42:58.181 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-13 09:42:58.182 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-13 09:42:58.219 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-13 09:42:58.219 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-13 09:53:01.640 +05:30 [INF] Fetching all languages.
+2024-08-13 09:53:01.816 +05:30 [INF] Fetching all genres.
+2024-08-13 09:53:01.829 +05:30 [INF] Fetching all books.
+2024-08-13 09:53:02.200 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 09:53:02.222 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 09:53:02.257 +05:30 [INF] Fetching all languages.
+2024-08-13 09:53:02.260 +05:30 [INF] Fetching all genres.
+2024-08-13 09:53:02.304 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 09:53:02.309 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 09:53:02.462 +05:30 [INF] Successfully fetched all books.
+2024-08-13 09:53:02.624 +05:30 [INF] Fetching all books.
+2024-08-13 09:53:03.334 +05:30 [INF] Successfully fetched all books.
+2024-08-13 09:53:04.266 +05:30 [INF] Fetching all genres with book count.
+2024-08-13 09:53:04.803 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-13 09:53:04.893 +05:30 [INF] Fetching all genres with book count.
+2024-08-13 09:53:05.615 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-13 09:54:04.186 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-13 09:54:12.310 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-13 09:54:19.039 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-13 09:54:19.070 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-13 09:54:19.093 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-13 09:56:33.546 +05:30 [INF] Fetching all languages.
+2024-08-13 09:56:33.751 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 09:58:31.883 +05:30 [INF] Fetching all books.
+2024-08-13 09:58:31.884 +05:30 [INF] Fetching all genres.
+2024-08-13 09:58:31.929 +05:30 [INF] Fetching all languages.
+2024-08-13 09:58:32.205 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 09:58:32.314 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 09:58:32.371 +05:30 [INF] Fetching all languages.
+2024-08-13 09:58:32.377 +05:30 [INF] Fetching all genres.
+2024-08-13 09:58:32.545 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 09:58:32.545 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 09:58:32.823 +05:30 [INF] Successfully fetched all books.
+2024-08-13 09:58:32.883 +05:30 [INF] Fetching all books.
+2024-08-13 09:58:33.168 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:00:02.482 +05:30 [INF] Creating a new genre.
+2024-08-13 10:00:02.718 +05:30 [WRN] Genre creation failed. Genre name already exists: Fantasy.
+2024-08-13 10:04:00.612 +05:30 [INF] Fetching all books.
+2024-08-13 10:04:00.646 +05:30 [INF] Fetching all genres.
+2024-08-13 10:04:01.185 +05:30 [INF] Fetching all languages.
+2024-08-13 10:04:01.208 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:04:01.219 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:04:01.277 +05:30 [INF] Fetching all languages.
+2024-08-13 10:04:01.278 +05:30 [INF] Fetching all genres.
+2024-08-13 10:04:01.295 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:04:01.295 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:04:01.326 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:04:01.380 +05:30 [INF] Fetching all books.
+2024-08-13 10:04:02.237 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:18:06.934 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-13 10:18:06.939 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-13 10:18:06.941 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-13 10:18:06.942 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-13 10:18:06.944 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-13 10:19:11.420 +05:30 [INF] Fetching all books.
+2024-08-13 10:19:11.541 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:19:34.209 +05:30 [INF] Fetching all genres.
+2024-08-13 10:19:34.256 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:19:53.496 +05:30 [INF] Fetching all genres with book count.
+2024-08-13 10:19:53.567 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-13 10:36:02.631 +05:30 [INF] Fetching all genres with book count.
+2024-08-13 10:36:02.684 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-13 10:36:02.981 +05:30 [INF] Fetching all genres with book count.
+2024-08-13 10:36:03.193 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-13 10:36:04.512 +05:30 [INF] Fetching all books.
+2024-08-13 10:36:04.515 +05:30 [INF] Fetching all genres.
+2024-08-13 10:36:04.813 +05:30 [INF] Fetching all languages.
+2024-08-13 10:36:05.072 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:36:05.258 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:36:05.273 +05:30 [INF] Fetching all genres.
+2024-08-13 10:36:05.291 +05:30 [INF] Fetching all languages.
+2024-08-13 10:36:05.304 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:36:05.319 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:36:05.582 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:36:05.806 +05:30 [INF] Fetching all books.
+2024-08-13 10:36:06.348 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:44:13.205 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-13 10:44:13.233 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-13 10:44:13.234 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-13 10:44:13.236 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-13 10:44:13.238 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-13 10:45:38.093 +05:30 [INF] Author test created successfully with ID 41.
+2024-08-13 10:46:17.169 +05:30 [INF] Fetching all books.
+2024-08-13 10:46:17.330 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:46:47.353 +05:30 [ERR] This is a test exception for demonstration purposes
+2024-08-13 10:46:47.371 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 59
+   at lambda_method342(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-13 10:46:47.484 +05:30 [ERR] An unhandled exception has occurred.
+System.Exception: This is a test exception for demonstration purposes.
+   at BookStoreApp.Api.Controllers.LanguagesController.CauseError() in D:\Users\karpagam\React-Csharp-Capstone\BookStoreApp-Api\BookStoreApp.Api\BookStoreApp.Api\Controllers\LanguagesController.cs:line 59
+   at lambda_method342(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-08-13 10:47:29.795 +05:30 [INF] Fetching all genres with book count.
+2024-08-13 10:47:29.813 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-13 10:47:29.866 +05:30 [INF] Fetching all genres with book count.
+2024-08-13 10:47:29.910 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-13 10:47:38.283 +05:30 [INF] Checking if genre name 'new genre' exists.
+2024-08-13 10:47:38.321 +05:30 [INF] Genre name 'new genre' exists: False.
+2024-08-13 10:47:38.352 +05:30 [INF] Creating a new genre.
+2024-08-13 10:47:38.386 +05:30 [INF] Successfully created genre with ID 25.
+2024-08-13 10:47:38.528 +05:30 [INF] Fetching all genres with book count.
+2024-08-13 10:47:38.685 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-13 10:48:04.327 +05:30 [INF] Fetching all genres with book count.
+2024-08-13 10:48:04.695 +05:30 [INF] Successfully fetched all genres with book count.
+2024-08-13 10:49:11.216 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-13 10:49:11.216 +05:30 [INF] Starting authentication for user: karpagam
+2024-08-13 10:49:12.114 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-13 10:49:12.115 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-13 10:49:12.116 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-13 10:49:12.113 +05:30 [INF] Validating credentials for user: karpagam
+2024-08-13 10:49:12.119 +05:30 [INF] Credentials validated successfully for user: karpagam
+2024-08-13 10:49:12.120 +05:30 [INF] Creating JWT token for user: karpagam
+2024-08-13 10:49:12.118 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-13 10:49:12.121 +05:30 [INF] Successfully created JWT token for user: karpagam
+2024-08-13 10:49:13.296 +05:30 [INF] Fetching all books.
+2024-08-13 10:49:13.298 +05:30 [INF] Fetching all genres.
+2024-08-13 10:49:13.794 +05:30 [INF] Fetching all languages.
+2024-08-13 10:49:14.208 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:49:14.788 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:49:14.881 +05:30 [INF] Fetching all genres.
+2024-08-13 10:49:15.079 +05:30 [INF] Fetching all languages.
+2024-08-13 10:49:15.117 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:49:15.356 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:49:15.932 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:49:16.055 +05:30 [INF] Fetching all books.
+2024-08-13 10:49:16.614 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:49:18.808 +05:30 [INF] Fetching all genres.
+2024-08-13 10:49:18.808 +05:30 [INF] Fetching all languages.
+2024-08-13 10:49:19.224 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:49:19.225 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:49:19.286 +05:30 [INF] Fetching all genres.
+2024-08-13 10:49:19.322 +05:30 [INF] Fetching all languages.
+2024-08-13 10:49:19.491 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:49:19.497 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:49:45.370 +05:30 [INF] Creating a new book.
+2024-08-13 10:49:45.437 +05:30 [INF] Successfully created book with ID 49.
+2024-08-13 10:49:47.243 +05:30 [INF] Fetching all books.
+2024-08-13 10:49:47.268 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:50:06.474 +05:30 [INF] Fetching book with ID 49.
+2024-08-13 10:50:06.476 +05:30 [INF] Fetching all genres.
+2024-08-13 10:50:06.476 +05:30 [INF] Fetching all languages.
+2024-08-13 10:50:06.701 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:50:06.701 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:50:06.721 +05:30 [INF] Successfully fetched book with ID 49.
+2024-08-13 10:50:06.765 +05:30 [INF] Fetching all genres.
+2024-08-13 10:50:06.796 +05:30 [INF] Fetching all languages.
+2024-08-13 10:50:06.931 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:50:06.935 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:50:16.595 +05:30 [INF] Updating book with ID 49.
+2024-08-13 10:50:16.659 +05:30 [INF] Successfully updated book with ID 49.
+2024-08-13 10:50:18.500 +05:30 [INF] Fetching all books.
+2024-08-13 10:50:18.936 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:50:43.025 +05:30 [INF] Fetching all books.
+2024-08-13 10:50:43.027 +05:30 [INF] Fetching all languages.
+2024-08-13 10:50:43.035 +05:30 [INF] Fetching all genres.
+2024-08-13 10:50:43.057 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:50:43.120 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:50:43.515 +05:30 [INF] Fetching all genres.
+2024-08-13 10:50:43.516 +05:30 [INF] Fetching all languages.
+2024-08-13 10:50:43.711 +05:30 [INF] Successfully fetched all genres.
+2024-08-13 10:50:43.711 +05:30 [INF] Successfully fetched all languages.
+2024-08-13 10:50:43.791 +05:30 [INF] Successfully fetched all books.
+2024-08-13 10:50:43.879 +05:30 [INF] Fetching all books.
+2024-08-13 10:50:44.354 +05:30 [INF] Successfully fetched all books.
